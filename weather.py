@@ -33,7 +33,7 @@ def celsius():
 
 def fahrenheit():
     '''Formula to convert celsius to fahrenheit.'''
-    convert = input('\nEnter the temperature in Fahrenheit.\n> ')
+    convert = input('\nEnter temperature in Fahrenheit.\n> ')
     formula = (int(convert) - 32) / 1.8  # Formula for fahrenheit to celsius
     print(f'{convert} degrees Fahrenheit is {int(formula)} degrees Celsius.\n')
 
@@ -47,8 +47,7 @@ def wind_speed():
 
 
 def prompt():
-    '''Prompts user to choose from a list of options and logs which option
-       is chosen.'''
+    '''Prompts user to choose from list of options and logs chosen option.'''
     while True:
         prompt_options = [
             '1 Convert from Fahrenheit', '2 Convert from Celsius',
@@ -56,14 +55,14 @@ def prompt():
             '6 Convert knots to MPH', '7 Cloud Types', '8 Exit']
 
         print('\n'.join(prompt_options))
-        unit_choice = input('\nWhat would you like to do?\n> ')
+        unit_choice = input('\nChoose an option.\n> ')
         log_entry = unit_choice  # Logs chosen option.
         file = open('promptLog.txt', 'a')
         file.write(log_entry)  # Writes log to file.
         read_log = open('promptLog.txt').read()  # Reads log from file.
         most_common = max(read_log, key=read_log.count) # Finds most common log entry.
         file.close()
-        print(f'\nYour most common choice is {most_common}.')
+        print(f'\nYour most common choice: {most_common}.')
 
 
         if unit_choice == '1':
