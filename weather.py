@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 '''By Micah M. 2018
-   Weather version 1.6
+   Weather version 1.7
    Python 3.7
    Requires forecast.py and cloudTypes.py'''
 
 import subprocess
 import sys
+import os
 
 def dew_point():
     '''Calculate the dew point.'''
@@ -60,11 +61,12 @@ def prompt():
         file = open('promptLog.txt', 'a')
         file.write(log_entry)  # Writes log to file.
         read_log = open('promptLog.txt').read()  # Reads log from file.
-        most_common = max(read_log, key=read_log.count) # Finds most common entry.
-        if most_common == None:
+        if os.stat('promptLog.txt').st_size == 0:
             print('No choices made yet.')
+        else:
+            most_common = max(read_log, key=read_log.count) # Finds most common entry.
+            print(f'\nYour most common choice: {most_common}.')
         file.close()
-        print(f'\nYour most common choice: {most_common}.')
 
 
         if unit_choice == '1':
