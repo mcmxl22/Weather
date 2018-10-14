@@ -8,7 +8,7 @@ import subprocess
 import sys
 
 def dew_point():
-    '''Formula to calculate the dew point.'''
+    '''Calculate the dew point.'''
     temp = input('\nEnter temperature in Celsius.\n> ')
     relative_humidity = input('\nEnter relative humidity\n> ')
     formula = (int(temp) - ((100 - int(relative_humidity)) / 5))
@@ -16,7 +16,7 @@ def dew_point():
 
 
 def cloud_base():
-    '''Formula to calculate the height of the clouds.'''
+    '''Calculate the height of the clouds.'''
     temp = input('Enter temperature in celsius.\n> ')
     dew = input('Enter dew point in celsius.\n> ')
     spread = int(temp) - int(dew)  # Spread = difference temp and dew point.
@@ -25,21 +25,21 @@ def cloud_base():
 
 
 def celsius():
-    '''Formula to convert fahrenheit to celsius.'''
+    '''Convert fahrenheit to celsius.'''
     convert = input('\nEnter temperature in Celsius.\n> ')
     formula = int(convert) * 1.8 + 32  # Formula for celsius to fahrenheit.
     print(f'{convert} degrees Celsius is {int(formula)} degrees Fahrenheit.\n')
 
 
 def fahrenheit():
-    '''Formula to convert celsius to fahrenheit.'''
-    convert = input('\nEnter temperature in Fahrenheit.\n> ')
+    '''Convert celsius to fahrenheit.'''
+    convert = input('\nEnter the temperature in Fahrenheit.\n> ')
     formula = (int(convert) - 32) / 1.8  # Formula for fahrenheit to celsius
     print(f'{convert} degrees Fahrenheit is {int(formula)} degrees Celsius.\n')
 
 
 def wind_speed():
-    '''Formula to convert knots to MPH'''
+    '''Convert knots to MPH'''
     convert = input('Enter wind speed in knots.\n ')
     formula = ((int(convert) * 6067) / 5280)
     print(f'{convert} knots is {round(formula, 3)} MPH.\n')
@@ -47,7 +47,7 @@ def wind_speed():
 
 
 def prompt():
-    '''Prompts user to choose from list of options and logs chosen option.'''
+    '''Prompt user to choose from list and log choice.'''
     while True:
         prompt_options = [
             '1 Convert from Fahrenheit', '2 Convert from Celsius',
@@ -56,11 +56,13 @@ def prompt():
 
         print('\n'.join(prompt_options))
         unit_choice = input('\nChoose an option.\n> ')
-        log_entry = unit_choice  # Logs chosen option.
+        log_entry = unit_choice  # Logs choice.
         file = open('promptLog.txt', 'a')
         file.write(log_entry)  # Writes log to file.
         read_log = open('promptLog.txt').read()  # Reads log from file.
-        most_common = max(read_log, key=read_log.count) # Finds most common log entry.
+        most_common = max(read_log, key=read_log.count) # Finds most common entry.
+        if most_common == None:
+            print('No choices made yet.')
         file.close()
         print(f'\nYour most common choice: {most_common}.')
 
