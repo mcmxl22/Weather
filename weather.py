@@ -6,7 +6,6 @@
 
 import subprocess
 import sys
-import os
 import entry_log
 
 def dew_point():
