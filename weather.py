@@ -8,55 +8,58 @@ import subprocess
 import sys
 import entry_log
 
+
 def dew_point():
     '''Calculate the dew point.'''
-    temperature = input('\nEnter temperature in Celsius.\n> ')
-    relative_humidity = input('\nEnter relative humidity\n> ')
+    temperature = input('\nEnter the temperature in Celsius.\n> ')
+    relative_humidity = input('\nEnter the relative humidity\n> ')
     dew_point_formula = (int(temperature) - ((100 - int(relative_humidity)) / 5))
     print(f'\nThe dew point is {int(dew_point_formula)} degrees Celsius.\n')
 
-
 def cloud_base():
     '''Calculate the height of the clouds.'''
-    temperature = input('Enter temperature in celsius.\n> ')
-    dew = input('Enter dew point in celsius.\n> ')
-    spread = int(temperature) - int(dew)  # Difference between temperature and dew point.
+    temperature = input('Enter the temperature in celsius.\n> ')
+    dew_pnt = input('Enter dew point in celsius.\n> ')
+    spread = int(temperature) - int(dew_pnt)
     cloud_ceiling_formula = int(spread) / 2.5 * 1000
-    print(f'The cloud ceiling is {int(cloud_ceiling_formula)} feet above the ground.\n')
+    print(f'''The cloud ceiling is
+              {int(cloud_ceiling_formula)} feet above the ground.\n''')
 
 
 def celsius():
     '''Convert fahrenheit to celsius.'''
-    convert = input('\nEnter temperature in Celsius.\n> ')
-    formula = int(convert) * 1.8 + 32  # Formula for celsius to fahrenheit.
-    print(f'{convert} degrees Celsius is {int(formula)} degrees Fahrenheit.\n')
+    celsius_convert = input('\nEnter temperature in Celsius.\n> ')
+    conversion_formula = int(celsius_convert) * 1.8 + 32
+    print(f'''{celsius_convert} degrees Celsius is
+              {int(conversion_formula)} degrees Fahrenheit.\n''')
 
 
 def fahrenheit():
     '''Convert celsius to fahrenheit.'''
-    convert = input('\nEnter the temperature in Fahrenheit.\n> ')
-    formula = (int(convert) - 32) / 1.8  # Formula for fahrenheit to celsius
-    print(f'{convert} degrees Fahrenheit is {int(formula)} degrees Celsius.\n')
+    fahrenheit_convert = input('\nEnter the temperature in Fahrenheit.\n> ')
+    conversion_formula = (int(fahrenheit_convert) - 32) / 1.8
+    print(f'''{fahrenheit_convert} degrees Fahrenheit is 
+              {int(conversion_formula)} degrees Celsius.\n''')
 
 
 def wind_speed():
     '''Convert knots to MPH'''
-    convert = input('Enter wind speed in knots.\n ')
-    formula = ((int(convert) * 6067) / 5280)
-    print(f'{convert} knots is {round(formula, 3)} MPH.\n')
-
+    wind_convert = input('Enter wind speed in knots.\n ')
+    conversion_formula = ((int(wind_convert) * 6067) / 5280)
+    print(f'''{wind_convert} knots is 
+              {round(conversion_formula, 2)} MPH.\n''')
 
 
 def prompt():
     '''Prompt user to choose from list, and log choice.'''
     while True:
         prompt_options = [
-            '1 Convert from Fahrenheit', '2 Convert from Celsius',
-            '3 Find Dew Point', '4 Weather Forcast', '5 Cloud Ceiling',
-            '6 Convert knots to MPH', '7 Cloud Types', '8 Exit']
+            '1 Convert to celsius ', '2 Convert to fahrenheit ',
+            '3 Find dew point', '4 Weather forcast', '5 Find cloud ceiling',
+            '6 Convert knots to MPH', '7 Cloud types', '8 Exit']
         print('\n'.join(prompt_options))
         prompt_choice = input('\nChoose an option.\n> ')
-        entry_log.entry_log(prompt_choice)
+        entry_log.entry(prompt_choice)
 
         if prompt_choice == '1':
             fahrenheit()
