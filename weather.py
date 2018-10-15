@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 '''By Micah M. 2018
-   Weather version 1.7
+   Weather version 1.8
    Python 3.7
-   Requires forecast.py and cloudTypes.py'''
+   Requires forecast.py, cloudTypes.py, entry_log'''
 
 import subprocess
 import sys
 import os
+import entry_log
 
 def dew_point():
     '''Calculate the dew point.'''
@@ -54,20 +55,9 @@ def prompt():
             '1 Convert from Fahrenheit', '2 Convert from Celsius',
             '3 Find Dew Point', '4 Weather Forcast', '5 Cloud Ceiling',
             '6 Convert knots to MPH', '7 Cloud Types', '8 Exit']
-
         print('\n'.join(prompt_options))
         unit_choice = input('\nChoose an option.\n> ')
-        log_entry = unit_choice  # Logs choice.
-        file = open('promptLog.txt', 'a')
-        file.write(log_entry)  # Writes log to file.
-        read_log = open('promptLog.txt').read()  # Reads log from file.
-        if os.stat('promptLog.txt').st_size == 0:
-            print('No choices made yet.')
-        else:
-            most_common = max(read_log, key=read_log.count) # Finds most common entry.
-            print(f'\nYour most common choice: {most_common}.')
-        file.close()
-
+        entry_log.entry_log(unit_choice)
 
         if unit_choice == '1':
             fahrenheit()
