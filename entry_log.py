@@ -6,6 +6,7 @@
 import os
 
 def entry_log(unit_choice):
+   '''Log user entry and sugest most common entry.'''
     log_entry = unit_choice  # Logs choice.
     file = open('promptLog.txt', 'a')
     file.write(log_entry)  # Writes log to file.
