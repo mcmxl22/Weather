@@ -2,7 +2,7 @@
 '''By Micah M. 2018
    Weather version 1.9
    Python 3.7
-   Requires forecast.py, cloud_types.py, entry_log'''
+   Requires forecast.py, cloud_types.py, entry_log.py'''
 
 import subprocess
 import sys
