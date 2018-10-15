@@ -1,16 +1,16 @@
 #!/usr/bin/env python3
 '''By Micah M. 2018
-   entry_log version 1
+   entry_log version 1.1
    Python 3.7'''
 
 import os
 
-def entry_log(unit_choice):
-   '''Log user entry and sugest most common entry.'''
-    log_entry = unit_choice  # Logs choice.
+def entry(unit_choice):
+    '''Log user entry and indicate most common entry.'''
+    log_entry = unit_choice
     file = open('promptLog.txt', 'a')
-    file.write(log_entry)  # Writes log to file.
-    read_log = open('promptLog.txt').read()  # Reads log from file.
+    file.write(log_entry)
+    read_log = open('promptLog.txt').read()
     if os.stat('promptLog.txt').st_size == 0:
         print('No choices made yet.')
     else:
@@ -20,4 +20,4 @@ def entry_log(unit_choice):
 
 
 if __name__ == "__main__":
-    entry_log()
+    entry(unit_choice)
