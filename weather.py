@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 '''By Micah M. 2018
-   Weather version 1.8
+   Weather version 1.9
    Python 3.7
-   Requires forecast.py, cloudTypes.py, entry_log'''
+   Requires forecast.py, cloud_types.py, entry_log'''
 
 import subprocess
 import sys
@@ -11,19 +11,19 @@ import entry_log
 
 def dew_point():
     '''Calculate the dew point.'''
-    temp = input('\nEnter temperature in Celsius.\n> ')
+    temperature = input('\nEnter temperature in Celsius.\n> ')
     relative_humidity = input('\nEnter relative humidity\n> ')
-    formula = (int(temp) - ((100 - int(relative_humidity)) / 5))
-    print(f'\nThe dew point is {int(formula)} degrees Celsius.\n')
+    dew_point_formula = (int(temperature) - ((100 - int(relative_humidity)) / 5))
+    print(f'\nThe dew point is {int(dew_point_formula)} degrees Celsius.\n')
 
 
 def cloud_base():
     '''Calculate the height of the clouds.'''
-    temp = input('Enter temperature in celsius.\n> ')
+    temperature = input('Enter temperature in celsius.\n> ')
     dew = input('Enter dew point in celsius.\n> ')
-    spread = int(temp) - int(dew)  # Spread = difference temp and dew point.
-    cloud_ceiling = int(spread) / 2.5 * 1000  # Formula to find cloud ceiling.
-    print(f'The cloud ceiling is {int(cloud_ceiling)} feet above the ground.\n')
+    spread = int(temperature) - int(dew)  # Difference between temperature and dew point.
+    cloud_ceiling_formula = int(spread) / 2.5 * 1000
+    print(f'The cloud ceiling is {int(cloud_ceiling_formula)} feet above the ground.\n')
 
 
 def celsius():
@@ -49,33 +49,33 @@ def wind_speed():
 
 
 def prompt():
-    '''Prompt user to choose from list and log choice.'''
+    '''Prompt user to choose from list, and log choice.'''
     while True:
         prompt_options = [
             '1 Convert from Fahrenheit', '2 Convert from Celsius',
             '3 Find Dew Point', '4 Weather Forcast', '5 Cloud Ceiling',
             '6 Convert knots to MPH', '7 Cloud Types', '8 Exit']
         print('\n'.join(prompt_options))
-        unit_choice = input('\nChoose an option.\n> ')
-        entry_log.entry_log(unit_choice)
+        prompt_choice = input('\nChoose an option.\n> ')
+        entry_log.entry_log(prompt_choice)
 
-        if unit_choice == '1':
+        if prompt_choice == '1':
             fahrenheit()
-        elif unit_choice == '2':
+        elif prompt_choice == '2':
             celsius()
-        elif unit_choice == '3':
+        elif prompt_choice == '3':
             dew_point()
-        elif unit_choice == '4':
+        elif prompt_choice == '4':
             forecast = [sys.executable, 'forecast.py']
             subprocess.call(forecast)
-        elif unit_choice == '5':
+        elif prompt_choice  == '5':
             cloud_base()
-        elif unit_choice == '6':
+        elif prompt_choice  == '6':
             wind_speed()
-        elif unit_choice == '7':
-            cloud_types = [sys.executable, 'cloudTypes.py']
+        elif prompt_choice  == '7':
+            cloud_types = [sys.executable, 'cloud_types.py']
             subprocess.call(cloud_types)
-        elif unit_choice == '8':
+        elif prompt_choice  == '8':
             raise SystemExit
         else:
             print('\nInvalid Entry\n')
