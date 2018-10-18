@@ -23,7 +23,7 @@ def cloud_base():
     spread = int(temperature) - int(dew_pnt)
     cloud_ceiling_formula = int(spread) / 2.5 * 1000
     print(f'''The cloud ceiling is
-              {int(cloud_ceiling_formula)} feet above the ground.\n''')
+              \r{int(cloud_ceiling_formula)} feet above the ground.\n''')
 
 
 def celsius():
@@ -31,7 +31,7 @@ def celsius():
     celsius_convert = input('\nEnter temperature in Celsius.\n> ')
     conversion_formula = int(celsius_convert) * 1.8 + 32
     print(f'''{celsius_convert} degrees Celsius is
-              {int(conversion_formula)} degrees Fahrenheit.\n''')
+              \r{int(conversion_formula)} degrees Fahrenheit.\n''')
 
 
 def fahrenheit():
@@ -39,7 +39,7 @@ def fahrenheit():
     fahrenheit_convert = input('\nEnter the temperature in Fahrenheit.\n> ')
     conversion_formula = (int(fahrenheit_convert) - 32) / 1.8
     print(f'''{fahrenheit_convert} degrees Fahrenheit is 
-              {int(conversion_formula)} degrees Celsius.\n''')
+              \r{int(conversion_formula)} degrees Celsius.\n''')
 
 
 def wind_speed():
@@ -47,7 +47,7 @@ def wind_speed():
     wind_convert = input('Enter wind speed in knots.\n ')
     conversion_formula = ((int(wind_convert) * 6067) / 5280)
     print(f'''{wind_convert} knots is 
-              {round(conversion_formula, 2)} MPH.\n''')
+              \r{round(conversion_formula, 2)} MPH.\n''')
 
 
 def prompt():
@@ -69,14 +69,14 @@ def prompt():
             dew_point()
         elif prompt_choice == '4':
             forecast = [sys.executable, 'forecast.py']
-            subprocess.call(forecast)
+            subprocess.run(forecast, shell=True)
         elif prompt_choice  == '5':
             cloud_base()
         elif prompt_choice  == '6':
             wind_speed()
         elif prompt_choice  == '7':
             cloud_types = [sys.executable, 'cloud_types.py']
-            subprocess.call(cloud_types)
+            subprocess.run(cloud_types, shell=True)
         elif prompt_choice  == '8':
             raise SystemExit
         else:
