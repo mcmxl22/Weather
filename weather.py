@@ -69,14 +69,14 @@ def prompt():
             dew_point()
         elif prompt_choice == '4':
             forecast = [sys.executable, 'forecast.py']
-            subprocess.run(forecast, shell=True)
+            subprocess.run(forecast)
         elif prompt_choice  == '5':
             cloud_base()
         elif prompt_choice  == '6':
             wind_speed()
         elif prompt_choice  == '7':
             cloud_types = [sys.executable, 'cloud_types.py']
-            subprocess.run(cloud_types, shell=True)
+            subprocess.run(cloud_types)
         elif prompt_choice  == '8':
             raise SystemExit
         else:
