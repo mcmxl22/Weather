@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 '''By Micah M. 2018
    Weather version 1.9
    Python 3.7
