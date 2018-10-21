@@ -13,8 +13,8 @@ DEGREE_SIGN = u'\N{DEGREE SIGN}'
 
 def dew_point():
     '''Calculate the dew point.'''
-    temperature = input('\nEnter the temperature in Celsius. ')
-    relative_humidity = input('\nEnter the relative humidity ')
+    temperature = input('Enter the temperature in Celsius. ')
+    relative_humidity = input('Enter the relative humidity ')
     dew_point_formula = (int(temperature) - ((100 - int(relative_humidity)) / 5))
     print(f'\nThe dew point is {int(dew_point_formula)}{DEGREE_SIGN}C.\n')
 
