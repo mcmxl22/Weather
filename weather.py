@@ -10,7 +10,6 @@ import entry_log
 
 DEGREE_SIGN = u'\N{DEGREE SIGN}'
 
-
 def dew_point():
     '''Calculate the dew point.'''
     temperature = input('Enter the temperature in Celsius. ')
@@ -83,7 +82,6 @@ def prompt():
             raise SystemExit
         else:
             print('\nInvalid Entry\n')
-
 
 
 if __name__ == "__main__":
