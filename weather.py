@@ -26,20 +26,20 @@ def cloud_base():
     spread = int(temperature) - int(enter_dew_point)
     cloud_ceiling_formula = int(spread) / 2.5 * 1000
     print('The cloud ceiling is')
-    print(f'{int(cloud_ceiling_formula)}\' above the ground.\n''')
+    print(f'{int(cloud_ceiling_formula)}\' above the ground.\n')
 
 
 def celsius():
-    '''Convert fahrenheit to celsius.'''
-    celsius_convert = input('\nEnter temperature in Celsius. ')
+    '''Convert Fahrenheit to Celsius.'''
+    celsius_convert = input('Enter temperature in Celsius. ')
     conversion_formula = int(celsius_convert) * 1.8 + 32
     print(f'{celsius_convert}{DEGREE_SIGN}C is')
     print(f'{int(conversion_formula)}{DEGREE_SIGN}F.\n')
 
 
 def fahrenheit():
-    '''Convert celsius to fahrenheit.'''
-    fahrenheit_convert = input('\nEnter the temperature in Fahrenheit. ')
+    '''Convert Celsius to Fahrenheit.'''
+    fahrenheit_convert = input('Enter the temperature in Fahrenheit. ')
     conversion_formula = (int(fahrenheit_convert) - 32) / 1.8
     print(f'{fahrenheit_convert}{DEGREE_SIGN}F is')
     print(f'{int(conversion_formula)}{DEGREE_SIGN}C.\n')
@@ -47,7 +47,7 @@ def fahrenheit():
 
 def wind_speed():
     '''Convert knots to MPH'''
-    wind_convert = input('\nEnter wind speed in knots. ')
+    wind_convert = input('Enter wind speed in knots. ')
     conversion_formula = ((int(wind_convert) * 6067) / 5280)
     print(f'{wind_convert} knots = {round(conversion_formula, 2)} MPH.\n')
 
@@ -56,8 +56,8 @@ def prompt():
     '''Prompt user to choose from list, and log choice.'''
     while True:
         prompt_options = [
-            '1 Convert to celsius ', '2 Convert to fahrenheit ',
-            '3 Find dew point', '4 Weather forcast', '5 Find cloud ceiling',
+            '1 Convert to Celsius ', '2 Convert to Fahrenheit ',
+            '3 Find dew point', '4 Weather forecast', '5 Find cloud ceiling',
             '6 Convert knots to MPH', '7 Cloud types', '8 Exit']
         print('\n'.join(prompt_options))
         prompt_choice = input('\nChoose an option. ')
