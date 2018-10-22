@@ -1,14 +1,15 @@
 #!/usr/bin/env python
 '''By Micah M. 2018
-   Weather version 10.1
+   McWeather version 10.1
    Python 3.7
-   Requires forecast.py, cloud_types.py, entry_log.py'''
+   Requires: forecast.py, cloud_types.py, entry_log.py'''
 
 import subprocess
 import sys
 import entry_log
 
 DEGREE_SIGN = u'\N{DEGREE SIGN}'
+
 
 def dew_point():
     '''Calculate the dew point.'''
@@ -82,6 +83,7 @@ def prompt():
             raise SystemExit
         else:
             print('\nInvalid Entry\n')
+
 
 
 if __name__ == "__main__":
