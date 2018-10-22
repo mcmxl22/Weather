@@ -11,7 +11,7 @@ def forecast():
     '''Weather forecasts'''
     forecast_options = ['1 Pressure trend', '2 Extended']
     print('\n'.join(forecast_options))
-    forecast_choice = input('\nChoose a forecast.\n> ')
+    forecast_choice = input('\nChoose a forecast. ')
 
     if forecast_choice == '1':
         this_forecast = [sys.executable, 'pressure_forecast.py']
