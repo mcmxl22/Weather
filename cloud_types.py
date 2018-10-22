@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 '''By Micah M. 2018
    cloud_types version 1.1
    Python 3.7'''
@@ -6,10 +6,9 @@
 import webbrowser
 
 def cloud_types():
-    '''cloud_types'''
-    clouds = ['1 Cumulus', '2 Stratus', '3 Cumulonimbus', '4 Cirus']
-    cloud_options = ['1 Cloud description', '2 Cloud image']
-
+    '''View information on cloud types.'''
+    clouds = ['1 Cumulus', '2 Stratus', '3 Cumulonimbus', '4 Cirrus']
+    cloud_options = ['1 Cloud descriptions', '2 Cloud images']
     print('\n'.join(cloud_options))
     options = input('Choose an option. \n')
 
