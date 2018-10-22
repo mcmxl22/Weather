@@ -1,22 +1,24 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python
 '''By Micah M. 2018
-   forecast version 1.2
+   forecast version 1.3
    Python 3.7'''
+
+import subprocess
+import sys
 
 
 def forecast():
-    '''Forecast based on barometric pressure trends
-       and log the trend chosen.'''
-    trend_options = ['1 Rising', '2 Falling', '3 Steady']
-    print('\n'.join(trend_options))
-    trend = input('Choose a trend. ')
+    '''Weather forecasts'''
+    forecast_options = ['1 Pressure trend', '2 Extended']
+    print('\n'.join(forecast_options))
+    forecast_choice = input('\nChoose a forecast.\n> ')
 
-    if trend == '1':
-        print('\nFairer weather on the way.\n')
-    elif trend == '2':
-        print('\nPoorer weather on the way.\n')
-    elif trend == '3':
-        print('\nNo significant change.\n')
+    if forecast_choice == '1':
+        this_forecast = [sys.executable, 'pressure_forecast.py']
+        subprocess.run(this_forecast)
+    elif forecast_choice == '2':
+        this_forecast = [sys.executable, 'extended_forecast.py']
+        subprocess.run(this_forecast)
     else:
         print('Invalid Entry!\n')
         forecast()
