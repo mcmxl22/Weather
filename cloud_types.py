@@ -1,52 +1,52 @@
 #!/usr/bin/env python
 '''By Micah M. 2018
-   cloud_types version 1.1
-   Python 3.7'''
+   cloud_types version 1.3
+   Python 3.7.1'''
 
 import webbrowser
 
-def cloud_types():
+def clouds(options):
     '''View information on cloud types.'''
-    clouds = ['1 Cumulus', '2 Stratus', '3 Cumulonimbus', '4 Cirrus']
+    cloud_types = ['1 Cumulus', '2 Stratus', '3 Cumulonimbus', '4 Cirrus']
     cloud_options = ['1 Cloud descriptions', '2 Cloud images']
     print('\n'.join(cloud_options))
-    options = input('Choose an option. \n')
+    options = input('Choose an option. ')
 
-    if options == '1':
+    if options in '1':
 
-        print('\n'.join(clouds))
-        description = input('Choose an option. \n')
+        print('\n'.join(cloud_types))
+        description = input('Choose an option. ')
 
-        if description == '1':
+        if description in '1':
             url = 'https://en.wikipedia.org/wiki/Cumulus_cloud'
             webbrowser.open(url)
-        elif description == '2':
+        elif description in '2':
             url = 'https://en.wikipedia.org/wiki/Stratus_cloud'
             webbrowser.open(url)
-        elif description == '3':
+        elif description in '3':
             url = 'https://en.wikipedia.org/wiki/Cumulonimbus_cloud'
             webbrowser.open(url)
-        elif description == '4':
+        elif description in '4':
             url = 'https://en.wikipedia.org/wiki/Cirrus_cloud'
             webbrowser.open(url)
         else:
             print('Invalid Answer.')
 
-    elif options == '2':
+    elif options in '2':
 
-        print('\n'.join(clouds))
-        img = input('Choose an option. \n')
+        print('\n'.join(cloud_types))
+        img = input('Choose an option. ')
 
-        if img == '1':
+        if img in '1':
             url = 'https://bit.ly/2xH55Er'
             webbrowser.open(url)
-        elif img == '2':
+        elif img in '2':
             url = 'https://bit.ly/2xxD42N'
             webbrowser.open(url)
-        elif img == '3':
+        elif img in '3':
             url = 'https://bit.ly/2Nwns9V'
             webbrowser.open(url)
-        if img == '4':
+        if img in '4':
             url = 'https://bit.ly/2xMDgKG'
             webbrowser.open(url)
 
@@ -57,4 +57,4 @@ def cloud_types():
         print('Invalid Answer.')
 
 if __name__ == "__main__":
-    cloud_types()
+    clouds()
