@@ -52,7 +52,7 @@ def wind_speed():
     print(f'{wind_convert} knots = {round(conversion_formula, 2)} MPH.')
 
 
-def prompt():
+def prompt(prompt_choice):
     '''Prompt user to choose from list, and log choice.'''
     while True:
         prompt_options = [
@@ -86,4 +86,4 @@ def prompt():
 
 
 if __name__ == "__main__":
-    prompt()
+    prompt('prompt_choice')
