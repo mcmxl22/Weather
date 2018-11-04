@@ -49,14 +49,13 @@ def wind_speed():
     '''Convert knots to MPH'''
     wind_convert = input('Enter wind speed in knots. ')
     conversion_formula = ((int(wind_convert) * 6067) / 5280)
-    print(f'{wind_convert} knots = {round(conversion_formula, 2)} MPH.')
+    print(f'{wind_convert} knots is {round(conversion_formula, 2)} MPH.')
 
 
 def prompt(prompt_choice):
     '''Prompt user to choose from list, and log choice.'''
     while True:
-        prompt_options = [
-            '1 Convert to Celsius ', '2 Convert to Fahrenheit ',
+        prompt_options = ['1 Convert to Celsius ', '2 Convert to Fahrenheit ',
             '3 Find dew point', '4 Weather forecast', '5 Find cloud ceiling',
             '6 Convert knots to MPH', '7 Cloud types', '8 Exit']
 
