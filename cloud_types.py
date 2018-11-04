@@ -57,4 +57,4 @@ def clouds(options):
         print('Invalid Answer.')
 
 if __name__ == "__main__":
-    clouds()
+    clouds('options')
