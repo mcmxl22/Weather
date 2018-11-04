@@ -6,7 +6,6 @@
 import cloud_types
 import entry_log
 import forecast
-import sys
 
 
 DEGREE_SIGN = u'\N{DEGREE SIGN}'
