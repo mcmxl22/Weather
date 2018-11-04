@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 '''By Micah M. 2018
    entry_log version 1.2
-   Python 3.7'''
+   Python 3.7.1'''
 
 import os
 
@@ -21,4 +21,4 @@ def entry(unit_choice):
 
 
 if __name__ == "__main__":
-    entry(unit_choice)
+    entry('unit_choice')
