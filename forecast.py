@@ -5,8 +5,6 @@
 
 import extended_forecast
 import pressure_forecast
-import subprocess
-import sys
 
 
 def forecast(forecast_choice):
@@ -16,15 +14,13 @@ def forecast(forecast_choice):
     forecast_choice = input('Choose a forecast. ')
 
     if forecast_choice in '1':
-        this_forecast = [sys.executable, 'pressure_forecast.py']
-        subprocess.run(this_forecast)
+        pressure_forecast.forecast(forecast_choice)
     elif forecast_choice in '2':
-        this_forecast = [sys.executable, 'extended_forecast.py']
-        subprocess.run(this_forecast)
+        extended_forecast.forecast(forecast_choice)
     else:
         print('Invalid Entry!')
-        forecast()
+        forecast(forecast_choice)
 
 
 if __name__ == "__main__":
-    forecast()
+    forecast('forecast_choice')
