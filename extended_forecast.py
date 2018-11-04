@@ -9,9 +9,10 @@ DEGREE_SIGN = u'\N{DEGREE SIGN}'
 
 
 def forecast(city):
+    '''Give an extended forecast based on location.'''
     city = input('Enter your location. ')
 
-    weather = Weather(unit = Unit.FAHRENHEIT)
+    weather = Weather(unit=Unit.FAHRENHEIT)
 
     location = weather.lookup_by_location(city)
     forecasts = location.forecast
