@@ -3,10 +3,11 @@
    McWeather version 10.3
    Python 3.7.1'''
 
-import beaufort
-import cloud_types
-import entry_log
-import forecast
+from beaufort import scale_wind
+from cloud_types import clouds
+from entry_log import entry
+from forecast import forecast
+from wind_speed import wind
 
 
 DEGREE_SIGN = u'\N{DEGREE SIGN}'
@@ -46,13 +47,6 @@ def fahrenheit():
     print(f'{int(conversion_formula)}{DEGREE_SIGN}C.')
 
 
-def wind_speed():
-    '''Convert knots to MPH'''
-    wind_convert = input('Enter wind speed in knots. ')
-    conversion_formula = ((int(wind_convert) * 6067) / 5280)
-    print(f'{wind_convert} knots is {round(conversion_formula, 2)} MPH.')
-
-
 def prompt(prompt_choice):
     '''Prompt user to choose from list, and log choice.'''
     while True:
@@ -63,7 +57,7 @@ def prompt(prompt_choice):
 
         print('\n'.join(prompt_options))
         prompt_choice = input('\nChoose an option. ')
-        entry_log.entry(prompt_choice)
+        entry(prompt_choice)
 
         if prompt_choice in '1':
             fahrenheit()
@@ -72,15 +66,15 @@ def prompt(prompt_choice):
         elif prompt_choice in '3':
             dew_point()
         elif prompt_choice in '4':
-            forecast.forecast(prompt_choice)
+            forecast(prompt_choice)
         elif prompt_choice in '5':
             cloud_base()
         elif prompt_choice in '6':
-            wind_speed()
+            wind(prompt_choice)
         elif prompt_choice in '7':
-            cloud_types.clouds(prompt_choice)
+            clouds(prompt_choice)
         elif prompt_choice in '8':
-            beaufort.scale_wind(prompt_choice)
+            scale_wind(prompt_choice)
         elif prompt_choice in '9':
             raise SystemExit
         else:
