@@ -12,7 +12,7 @@ SCALE = {'0': 'Calm', '1': 'Light air', '2': 'Light breeze',
          '12': 'Hurricane force'}
 
 def scale_wind(wind_speed):
-    '''Prints'''
+    '''Prints Beaufort scale description of wind speeds.'''
     wind_speed = int(input('Enter wind speed. '))
 
     if wind_speed == 0:
