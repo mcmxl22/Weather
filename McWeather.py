@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 '''By Micah M. 2018
-   McWeather version 10.2
+   McWeather version 10.3
    Python 3.7.1'''
 
+import beaufort
 import cloud_types
 import entry_log
 import forecast
@@ -57,9 +58,10 @@ def prompt(prompt_choice):
     while True:
         prompt_options = ['1 Convert to Celsius ', '2 Convert to Fahrenheit ',
             '3 Find dew point', '4 Weather forecast', '5 Find cloud ceiling',
-            '6 Convert knots to MPH', '7 Cloud types', '8 Exit']
+            '6 Convert knots to MPH', '7 Cloud types', '8 Beaufort scale',
+            '9 Exit']
 
-        print(' \n'.join(prompt_options))
+        print('\n'.join(prompt_options))
         prompt_choice = input('\nChoose an option. ')
         entry_log.entry(prompt_choice)
 
@@ -78,6 +80,8 @@ def prompt(prompt_choice):
         elif prompt_choice in '7':
             cloud_types.clouds(prompt_choice)
         elif prompt_choice in '8':
+            beaufort.scale_wind(prompt_choice)
+        elif prompt_choice in '9':
             raise SystemExit
         else:
             print('\nInvalid Entry')
