@@ -6,8 +6,8 @@
 
 SCALE = {'0': 'Calm', '1': 'Light air', '2': 'Light breeze',
          '3': 'Gentle breeze', '4': 'Moderate breeze',
-         '5': 'Fresh Breeze', '6': 'Strong breeze', 
-         '7': 'Moderate gale', '8': 'Fresh gale', 
+         '5': 'Fresh Breeze', '6': 'Strong breeze',
+         '7': 'Moderate gale', '8': 'Fresh gale',
          '9': 'Strong gale', '10': 'Whole gale', '11': 'Storm',
          '12': 'Hurricane force'}
 
