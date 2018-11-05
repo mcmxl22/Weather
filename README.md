@@ -1,4 +1,4 @@
-# Weather
+# McWeather
 Do various activities pertaining to weather.
 - Convert temperatures(C\F).
 - Convert knots to MPH.
