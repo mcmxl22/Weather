@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 '''By Micah M. 2018
-   entry_log version 1.2
+   entry_log version 1.3
    Python 3.7.1'''
 
 import os
 
 def entry(unit_choice):
     '''Log user entry and indicate most common entry.'''
-    if unit_choice != '8':
+    if unit_choice != '9':
         log_entry = unit_choice
         file = open('prompt_log.txt', 'a')
         file.write(log_entry)
