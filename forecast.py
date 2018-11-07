@@ -1,14 +1,14 @@
 #!/usr/bin/env python
-'''By Micah M. 2018
+"""By Micah M. 2018
    forecast version 1.3
-   Python 3.7.1'''
+   Python 3.7.1"""
 
 import extended_forecast
 import pressure_forecast
 
 
 def forecast(forecast_choice):
-    '''Weather forecasts'''
+    """Weather forecasts"""
     forecast_options = ['1 Pressure trend based', '2 Extended']
     print('\n'.join(forecast_options))
     forecast_choice = input('Choose a forecast. ')

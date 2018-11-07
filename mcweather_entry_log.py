@@ -1,12 +1,13 @@
 #!/usr/bin/env python
-'''By Micah M. 2018
+"""By Micah M. 2018
    mcweather_entry_log version 1.4
-   Python 3.7.1'''
+   Python 3.7.1"""
 
 import os
 
+
 def entry(unit_choice):
-    '''Log user entry and indicate most common entry.'''
+    """Log user entry and indicate most common entry."""
     if unit_choice != '10':
         log_entry = unit_choice
         file = open('prompt_log.txt', 'a')

@@ -1,12 +1,13 @@
 #!/usr/bin/env python
-'''By Micah M. 2018
+"""By Micah M. 2018
    cloud_types version 1.3
-   Python 3.7.1'''
+   Python 3.7.1"""
 
 import webbrowser
 
+
 def clouds(options):
-    '''View information on cloud types.'''
+    """View information on cloud types."""
     cloud_types = ['1 Cumulus', '2 Stratus', '3 Cumulonimbus', '4 Cirrus']
     cloud_options = ['1 Cloud descriptions', '2 Cloud images']
     print('\n'.join(cloud_options))
@@ -55,6 +56,7 @@ def clouds(options):
 
     else:
         print('Invalid Answer.')
+
 
 if __name__ == "__main__":
     clouds('options')

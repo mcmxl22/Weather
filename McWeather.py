@@ -1,7 +1,7 @@
 #!/usr/bin/env python
-'''By Micah M. 2018
+"""By Micah M. 2018
    McWeather version 10.4
-   Python 3.7.1'''
+   Python 3.7.1"""
 
 from beaufort import scale_wind
 from celsius_conversion import to_fahrenheit
@@ -16,9 +16,10 @@ from wind_speed import wind
 
 
 def prompt(prompt_choice):
-    '''Prompt user to choose from list, and log choice.'''
+    """Prompt user to choose from list, and log choice."""
     while True:
-        prompt_options = ['1 Convert to Celsius ', '2 Convert to Fahrenheit ',
+        prompt_options = [
+            '1 Convert to Celsius ', '2 Convert to Fahrenheit ',
             '3 Find dew point', '4 Weather forecast', '5 Find cloud ceiling',
             '6 Convert knots to MPH', '7 Cloud types', '8 Beaufort scale',
             '9 Convert pressure', '10 Exit']
@@ -49,7 +50,6 @@ def prompt(prompt_choice):
             raise SystemExit
         else:
             print('\nInvalid Entry')
-
 
 
 if __name__ == "__main__":
