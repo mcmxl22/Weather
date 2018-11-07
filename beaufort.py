@@ -1,8 +1,7 @@
 #!/usr/bin/env python
-'''By Micah M. 2018
+"""By Micah M. 2018
    beaufort version 1
-   Python 3.7.1'''
-
+   Python 3.7.1"""
 
 SCALE = {'0': 'Calm', '1': 'Light air', '2': 'Light breeze',
          '3': 'Gentle breeze', '4': 'Moderate breeze',
@@ -11,8 +10,9 @@ SCALE = {'0': 'Calm', '1': 'Light air', '2': 'Light breeze',
          '9': 'Strong gale', '10': 'Whole gale', '11': 'Storm',
          '12': 'Hurricane force'}
 
+
 def scale_wind(wind_speed):
-    '''Prints Beaufort scale description of wind speeds.'''
+    """Prints Beaufort scale description of wind speeds."""
     wind_speed = int(input('Enter wind speed. '))
 
     if wind_speed == 0:
@@ -43,6 +43,7 @@ def scale_wind(wind_speed):
         print(SCALE['12'])
     else:
         print('Invalid Entry!')
+
 
 if __name__ == "__main__":
     scale_wind('wind_speed')
