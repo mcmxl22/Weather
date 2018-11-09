@@ -17,11 +17,11 @@ def forecast(city):
     location = weather.lookup_by_location(city)
     forecasts = location.forecast
 
-    for forecast in forecasts:
-        print(f'\n{forecast.date}')
-        print(forecast.text)
-        print(f'{forecast.high}{DEGREE_SIGN}F High')
-        print(f'{forecast.low}{DEGREE_SIGN}F Low\n')
+    for cast in forecasts:
+        print(f'\n{cast.date}')
+        print(cast.text)
+        print(f'{cast.high}{DEGREE_SIGN}F High')
+        print(f'{cast.low}{DEGREE_SIGN}F Low\n')
 
 
 if __name__ == "__main__":
