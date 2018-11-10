@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 """By Micah M. 2018
-   McWeather version 10.4
+   index version 10.4
    Python 3.7.1"""
 
 from beaufort import scale_wind
