@@ -8,7 +8,7 @@ from celsius_conversion import to_fahrenheit
 from cloud_base import base
 from cloud_types import clouds
 from dew_point import dew_point
-from entry_log import entry
+from mcweather_entry_log import entry
 from fahrenheit_conversion import to_celsius
 from forecast import forecast
 from pressure_conversion import convert_millibars

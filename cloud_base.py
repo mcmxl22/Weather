@@ -4,7 +4,7 @@
    Python 3.7.1"""
 
 
-def cloud_base(temperature):
+def base(temperature):
     """Calculate the height of the clouds."""
     temperature = input('Enter the temperature in Celsius. ')
     enter_dew_point = input('Enter dew point in Celsius. ')
@@ -14,4 +14,4 @@ def cloud_base(temperature):
     print(f'{int(cloud_ceiling_formula)}\' above the ground.\n')
 
     if __name__ == "__main__":
-        cloud_base('temperature')
+        base('temperature')
