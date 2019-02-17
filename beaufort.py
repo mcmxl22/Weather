@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-"""By Micah M. 2018
+"""By Micah M. 2019
    beaufort version 1
    Python 3.7.1"""
 
