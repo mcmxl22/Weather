@@ -1,6 +1,6 @@
 #!/usr/bin/env python
-"""By Micah M. 2018
-   cloud_types version 1.3
+"""By Micah M. 2019
+   cloud_types version 1.4
    Python 3.7.1"""
 
 import webbrowser
@@ -47,7 +47,7 @@ def clouds(options):
         elif img in '3':
             url = 'https://bit.ly/2Nwns9V'
             webbrowser.open(url)
-        if img in '4':
+        elif img in '4':
             url = 'https://bit.ly/2xMDgKG'
             webbrowser.open(url)
 
