@@ -1,7 +1,6 @@
-#!/usr/bin/env python
-"""By Micah M. 2019
-   cloud_base version 1
-   Python 3.7.1"""
+#!/bin/python3
+"""cloud_base version 1
+   Python 3.7.2"""
 
 
 def base(temperature):
@@ -10,8 +9,9 @@ def base(temperature):
     enter_dew_point = input('Enter dew point in Celsius. ')
     spread = int(temperature) - int(enter_dew_point)
     cloud_ceiling_formula = int(spread) / 2.5 * 1000
-    print('The cloud ceiling is')
-    print(f'{int(cloud_ceiling_formula)}\' above the ground.\n')
+    print(f'''The cloud ceiling is
+          \r{int(cloud_ceiling_formula)}\' above the ground.''')
 
-    if __name__ == "__main__":
-        base('temperature')
+
+if __name__ == "__main__":
+    base('temperature')

@@ -1,12 +1,11 @@
-#!/usr/bin/env python
-"""By Micah M. 2018
-   pressure_forecast version 1.3
-   Python 3.7.1"""
+#!/bin/python3
+"""pressure_forecast version 1.3
+   Python 3.7.2"""
 
 
 def forecast(trend):
     """Forecasts based on barometric pressure trends"""
-    trend_options = ['1 Rising', '2 Falling', '3 Steady']
+    trend_options = ['1. Rising', '2. Falling', '3. Steady']
     print('\n'.join(trend_options))
     trend = input('\nChoose a trend. ')
 

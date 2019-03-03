@@ -1,7 +1,6 @@
-#!/usr/bin/env python
-"""By Micah M. 2018
-   wind_speed version 1
-   Python 3.7.1"""
+#!/bin/python3
+"""wind_speed version 1
+   Python 3.7.2"""
 
 
 def wind(wind_convert):

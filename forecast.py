@@ -1,14 +1,13 @@
-#!/usr/bin/env python
-"""forecast version 1.4
-   Python 3.7.1"""
+#!/bin/python3
+"""forecast version 1.3
+   Python 3.7.2"""
 
-import extended_forecast
 import pressure_forecast
 
 
 def forecast(forecast_choice):
     """Weather forecasts"""
-    forecast_options = ['1 Pressure trend based']
+    forecast_options = ['1. Pressure trend based']
     print('\n'.join(forecast_options))
     forecast_choice = input('Choose a forecast. ')
 

@@ -1,7 +1,6 @@
-#!/usr/bin/env python
-"""By Micah M. 2019
-   celcius_conversion version 1
-   Python 3.7.1"""
+#!/bin/python3
+"""celcius_conversion version 1
+   Python 3.7.2"""
 
 
 def to_fahrenheit(fahrenheit_convert):
@@ -11,7 +10,6 @@ def to_fahrenheit(fahrenheit_convert):
     conversion_formula = (int(fahrenheit_convert) - 32) / 1.8
     print(f'''{fahrenheit_convert}{degree_sign}F is
           \r{int(conversion_formula)}{degree_sign}C.''')
-
 
 if __name__ == "__main__":
     to_fahrenheit('fahrenheit_convert')
