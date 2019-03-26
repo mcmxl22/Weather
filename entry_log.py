@@ -1,12 +1,12 @@
 #!/bin/python3
-"""entry_log version 1.5
+"""entry_log version 1.6
    Python 3.7.2"""
 
 import os
 
 def entry(unit_choice):
-    '''Log user entry and indicate most common entry.'''
-    if unit_choice != '10':
+    """Log user entry and indicate most common entry."""
+    if unit_choice >= '10':
         log_entry = unit_choice
         with open('prompt_log.txt', 'a') as f:
             f.write(log_entry)
