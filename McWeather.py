@@ -1,5 +1,5 @@
-#!/bin/python3
-"""McWeather version 10.4
+#!/usr/bin/env python3
+"""index version 10.5
    Python 3.7.2"""
 
 from beaufort import scale_wind
@@ -7,7 +7,7 @@ from celsius_conversion import to_fahrenheit
 from cloud_base import base
 from cloud_types import clouds
 from dew_point import dew_point
-from entry_log import entry
+from mcweather_entry_log import entry
 from fahrenheit_conversion import to_celsius
 from forecast import forecast
 from pressure_conversion import convert_millibars
@@ -15,15 +15,16 @@ from wind_speed import wind
 
 
 def prompt(prompt_choice):
-    """Prompt user to choose from list, and log choice."""
+    """Prompt user to choose from list."""
     while True:
         prompt_options = [
-            '1. Convert to Celsius ', '2. Convert to Fahrenheit ',
-            '3. Find dew point', '4. Weather forecast', '5. Find cloud ceiling',
-            '6. Convert knots to MPH', '7. Cloud types', '8. Beaufort scale',
-            '9. Convert pressure', '10. Exit']
+            'Convert to Celsius ', 'Convert to Fahrenheit ',
+            'Find dew point', 'Weather forecast', 'Find cloud ceiling',
+            'Convert knots to MPH', 'Cloud types', 'Beaufort scale',
+            'Convert pressure', 'Exit']
 
-        print('\n'.join(prompt_options))
+        for index, prompt in enumerate(prompt_options, start=1):
+            print(index, prompt)
         prompt_choice = input('\nChoose an option. ')
         entry(prompt_choice)
 
