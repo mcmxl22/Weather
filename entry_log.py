@@ -6,7 +6,7 @@ import os
 
 def entry(unit_choice):
     """Log user entry and indicate most common entry."""
-    if unit_choice >= '10':
+    if unit_choice < '10':
         log_entry = unit_choice
         with open('prompt_log.txt', 'a') as f:
             f.write(log_entry)
