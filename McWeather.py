@@ -18,7 +18,7 @@ def prompt(prompt_choice):
     """Prompt user to choose from list."""
     while True:
         prompt_options = [
-            'Convert to Celsius ', 'Convert to Fahrenheit ',
+            'Convert to Celsius', 'Convert to Fahrenheit',
             'Find dew point', 'Weather forecast', 'Find cloud ceiling',
             'Convert knots to MPH', 'Cloud types', 'Beaufort scale',
             'Convert pressure', 'Exit']
