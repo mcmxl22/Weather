@@ -1,5 +1,5 @@
 #!/bin/python3
-"""mcweather_entry_log version 1.5
+"""mcweather_entry_log version 1.6
    Python 3.7.2"""
 
 import os
