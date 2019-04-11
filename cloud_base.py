@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/env python3
 """cloud_base version 1
    Python 3.7.2"""
 
