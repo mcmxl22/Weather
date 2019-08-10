@@ -1,15 +1,31 @@
-#!/bin/python3
-"""wind_speed version 1
-   Python 3.7.2"""
+#!/usr/bin/env python3
+"""
+wind_speed version 1.3
+Python 3.7
+"""
+
+import logging
 
 
-def wind(wind_convert):
+logging.basicConfig(filename="wind_speed.log", level=logging.DEBUG)
+
+
+def wind(convert_wind):
     """Convert knots to MPH"""
-    wind_convert = input('Enter wind speed in knots. ')
-    conversion_formula = ((int(wind_convert) * 6067) / 5280)
-    results = f'{wind_convert} knots is {round(conversion_formula, 2)} MPH.'
-    print(results)
+    convert_wind = input("Enter wind speed as knots. ")
+    logging.debug(convert_wind)
+
+    try:
+        conversion_formula = ((int(convert_wind)) * 6067) / 5280
+        result = f"{convert_wind} knots is {round(conversion_formula, 2)} MPH."
+        logging.debug(result)
+        print(result)
+
+    except ValueError as error:
+        logging.debug(error)
+        print("Entry must be a number")
+        wind(convert_wind)
 
 
 if __name__ == "__main__":
-    wind('wind_convert')
+    wind("convert_wind")
