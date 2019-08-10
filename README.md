@@ -6,4 +6,4 @@ Do various activities pertaining to weather.
 - Find how high the clouds are.
 - Find out what the Beaufort scale says about wind speeds.
 
-Many of these require <link><a href="https://github.com/mcmxl22/Python-doodles/blob/master/utilities/numli.py">numli.py</link>.
+Many of these scripts require <link><a href="https://github.com/mcmxl22/Python-doodles/blob/master/utilities/numli.py">numli.py</link>.
