@@ -1,24 +1,31 @@
-#!/bin/python3
-"""pressure_forecast version 1.3
-   Python 3.7.2"""
+#!/usr/bin/env python3
+"""
+pressure_forecast version 1.3
+Python 3.7
+"""
 
+import numli
 
-def forecast(trend):
+def forecast(pressure_trend):
     """Forecasts based on barometric pressure trends"""
-    trend_options = ['1. Rising', '2. Falling', '3. Steady']
-    print('\n'.join(trend_options))
-    trend = input('\nChoose a trend. ')
+    trend_options = ['Rising', 'Falling', 'Steady']
+    numli.addnum(trend_options)
+    pressure_trend = input('\nChoose a trend. ')
+    invalid = 'Invalid Entry!'
 
-    if trend in '1':
-        print('Fairer weather on the way.')
-    elif trend in '2':
-        print('Poorer weather on the way.')
-    elif trend in '3':
-        print('No significant change.\n')
+    forecast_dict = {
+        '1': 'Fairer weather on the way.',
+        '2': 'Poorer weather on the way.',
+        '3': 'No significant change.'
+    }
+
+    if pressure_trend in forecast_dict:
+        print(forecast_dict[pressure_trend])
+
     else:
-        print('Invalid Entry!')
+        print(invalid)
         forecast(trend)
 
 
 if __name__ == "__main__":
-    forecast('trend')
+    forecast('pressure_trend')
