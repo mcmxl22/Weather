@@ -16,7 +16,7 @@ def wind(convert_wind):
     logging.debug(convert_wind)
 
     try:
-        conversion_formula = ((int(convert_wind)) * 6067) / 5280
+        conversion_formula = ((float(convert_wind)) * 6067) / 5280
         result = f"{convert_wind} knots is {round(conversion_formula, 2)} MPH."
         logging.debug(result)
         print(result)
