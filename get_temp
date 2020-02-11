@@ -1,0 +1,42 @@
+#!/usr/bin/env python3
+"""
+get_temp version 1
+Python 3.7
+"""
+
+
+import requests
+import time
+from bs4 import BeautifulSoup
+import xlwt
+from xlwt import Workbook
+
+
+def get_temp():
+    page = requests.get(
+        "https://forecast.weather.gov/MapClick.php?CityName=Loveland&state=CO&site=BOU&lat=40.4186&lon=-105.072"
+    )
+    soup = BeautifulSoup(page.content, "html.parser")
+    name = soup.find("p", {"class": "myforecast-current-lrg"})
+    current_temp = "".join(name)
+    temp_list = list(current_temp)
+    del temp_list[2:4]
+    return int("".join(temp_list))
+
+
+def write_temp():
+    seconds = 300
+    col = 0
+    row = 0
+    wb = Workbook()
+    sheet1 = wb.add_sheet("Temp")
+    while True:
+        print(f'writting temp.')
+        sheet1.write(row, col, get_temp())
+        wb.save('Temp.xls')
+        row += 1
+        time.sleep(seconds)
+
+
+if __name__ == "__main__":
+    write_temp()
