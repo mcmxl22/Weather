@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-get_temp version 1.3
+get_temp version 1.4
 Python 3.7
 """
 
@@ -20,7 +20,8 @@ def get_temperature():
     #Formats temperature.
     current_temp = "".join(name)
     temp_list = list(current_temp)
-    del temp_list[2:4]
+    temp_list.pop(3)
+    temp_list.pop(2)
     temp = int("".join(temp_list))
     return temp
 
