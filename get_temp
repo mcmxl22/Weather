@@ -6,7 +6,6 @@ Python 3.7
 
 from bs4 import BeautifulSoup
 from datetime import datetime
-import logging
 import requests
 import time
 from xlwt import Workbook
