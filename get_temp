@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-get_temp version 1.5
+get_temp version 1.6
 Python 3.7
 """
 
@@ -12,16 +12,16 @@ from xlwt import Workbook
 
 
 def get_temperature():
-    """Gets temperature from web and formats it."""
-    page = requests.get("http://bit.ly/3bqVxjP")
-    soup = BeautifulSoup(page.content, "html.parser")
-    name = soup.find("p", {"class": "myforecast-current-lrg"})
+    """Gets temperature from the interwebs and formats it."""
+    get_page = requests.get("http://bit.ly/3bqVxjP")
+    soup = BeautifulSoup(get_page.content, "html.parser")
+    get_temp = soup.find("p", {"class": "myforecast-current-lrg"})
 
     #Formats temperature.
-    current_temp = "".join(name)
+    current_temp = "".join(get_temp)
     temp_list = list(current_temp)
-    trim_temp = [s for s in temp_list if s not in ["°", "F"]]
-    temp = int("".join(trim_temp))
+    trim_characters = [s for s in temp_list if s not in ["°", "F"]]
+    temp = int("".join(trim_characters))
     return temp
 
 
