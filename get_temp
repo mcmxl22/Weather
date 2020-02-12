@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-get_temp version 1.6
+get_temp version 1.7
 Python 3.7
 """
 
@@ -9,6 +9,14 @@ from datetime import datetime
 import requests
 import time
 from xlwt import Workbook
+
+
+def check_file():
+    try:
+        myfile = open("Temp.xls", "r+")
+    except IOError:
+        print("Please close Temp.xls.")
+        raise SystemExit
 
 
 def get_temperature():
