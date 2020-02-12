@@ -56,4 +56,5 @@ def write_temperature():
 
 
 if __name__ == "__main__":
+    check_file()
     write_temperature()
