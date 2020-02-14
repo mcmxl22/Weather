@@ -1,22 +1,18 @@
 #!/usr/bin/env python3
 """
-get_temp version 1.7
+get _temp version 1.8
 Python 3.7
 """
 
 from bs4 import BeautifulSoup
 from datetime import datetime
+import logging
 import requests
 import time
 from xlwt import Workbook
+import os.path
 
-
-def check_file():
-    try:
-        myfile = open("Temp.xls", "r+")
-    except IOError:
-        print("Please close Temp.xls.")
-        raise SystemExit
+logging.basicConfig(filename="temp.log", level=logging.INFO)
 
 
 def get_temperature():
@@ -25,11 +21,13 @@ def get_temperature():
     soup = BeautifulSoup(get_page.content, "html.parser")
     get_temp = soup.find("p", {"class": "myforecast-current-lrg"})
 
-    #Formats temperature.
+
+    # Formats temperature.
     current_temp = "".join(get_temp)
     temp_list = list(current_temp)
     trim_characters = [s for s in temp_list if s not in ["°", "F"]]
     temp = int("".join(trim_characters))
+    logging.info(temp)
     return temp
 
 
@@ -37,6 +35,7 @@ def get_time():
     """Gets time of day."""
     now = datetime.now()
     current_time = now.strftime("%H:%M")
+    logging.info(current_time)
     return current_time
 
 
@@ -44,17 +43,20 @@ def write_temperature():
     """Writes temperature and time to .xls file at set interval."""
     seconds = 3600
     col, row = 0, 0
-    wb = Workbook()
-    sheet1 = wb.add_sheet("Temperature")
+    book = Workbook()
+    sheet1 = book.add_sheet("Temperature")
     while True:
         print(f"Writting at {get_time()}.")
-        sheet1.write(row, col, get_temperature())
-        sheet1.write(row, 1, get_time())
-        wb.save("Temp.xls")
-        row += 1
-        time.sleep(seconds)
+        try:
+            sheet1.write(row, col, get_temperature())
+            sheet1.write(row, 1, get_time())
+            book.save("Temp.xls")
+            row += 1
+            time.sleep(seconds)
+        except PermissionError:
+            print("Please close the file.")
+            raise SystemExit
 
 
 if __name__ == "__main__":
-    check_file()
     write_temperature()
