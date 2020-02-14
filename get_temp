@@ -6,13 +6,9 @@ Python 3.7
 
 from bs4 import BeautifulSoup
 from datetime import datetime
-import logging
 import requests
 import time
 from xlwt import Workbook
-import os.path
-
-logging.basicConfig(filename="temp.log", level=logging.INFO)
 
 
 def get_temperature():
@@ -26,7 +22,6 @@ def get_temperature():
     temp_list = list(current_temp)
     trim_characters = [s for s in temp_list if s not in ["°", "F"]]
     temp = int("".join(trim_characters))
-    logging.info(temp)
     return temp
 
 
@@ -34,7 +29,6 @@ def get_time():
     """Gets time of day."""
     now = datetime.now()
     current_time = now.strftime("%H:%M")
-    logging.info(current_time)
     return current_time
 
 
