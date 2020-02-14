@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-get _temp version 1.8
+get _temp version 1.9
 Python 3.7
 """
 
@@ -20,7 +20,6 @@ def get_temperature():
     get_page = requests.get("http://bit.ly/3bqVxjP")
     soup = BeautifulSoup(get_page.content, "html.parser")
     get_temp = soup.find("p", {"class": "myforecast-current-lrg"})
-
 
     # Formats temperature.
     current_temp = "".join(get_temp)
