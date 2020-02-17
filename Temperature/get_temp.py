@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-get_temp.py version 2.1
+get_temp.py version 2.2
+requires get_time.py
 Python 3.7
 """
 
 from bs4 import BeautifulSoup
-import get_time
+from get_time import get_time
 import requests
 import time
 from xlwt import Workbook
@@ -16,7 +17,6 @@ def get_temperature():
     get_page = requests.get("http://bit.ly/3bqVxjP")
     soup = BeautifulSoup(get_page.content, "html.parser")
     get_temp = soup.find("p", {"class": "myforecast-current-lrg"})
-
 
     # Formats temperature.
     current_temp = "".join(get_temp)
@@ -33,7 +33,7 @@ def write_temperature():
     book = Workbook()
     sheet1 = book.add_sheet("Temperature")
     while True:
-        this_time = get_time.get_time()
+        this_time = get_time()
         print(f"Temperature recorded at: {this_time}", end="\r")
         try:
             sheet1.write(row, col, get_temperature())
