@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-get_temp.py version 2.2
+get_temp.py version 2.3
 requires get_time.py
 Python 3.7
 """
@@ -10,6 +10,7 @@ from get_time import get_time
 import requests
 import time
 from xlwt import Workbook
+import sys
 
 
 def get_temperature():
@@ -26,7 +27,7 @@ def get_temperature():
     return temp
 
 
-def write_temperature():
+def main():
     """Writes temperature and time to .xls file at set interval."""
     seconds = 60
     col, row = 0, 0
@@ -42,9 +43,8 @@ def write_temperature():
             row += 1
             time.sleep(seconds)
         except PermissionError:
-            print("Please close the file.")
-            raise SystemExit
+            sys.exit("Please close the file.")
 
 
 if __name__ == "__main__":
-    write_temperature()
+    sys.exit(main())
