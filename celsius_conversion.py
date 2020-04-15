@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""celcius_conversion version 1
-   Python 3.7.2"""
+"""
+celcius_conversion version 1
+Python 3.7
+"""
 
 
 def to_fahrenheit(fahrenheit_convert):
