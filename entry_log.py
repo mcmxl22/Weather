@@ -1,6 +1,8 @@
 #!/bin/python3
-"""entry_log version 1.6
-   Python 3.7.2"""
+"""
+entry_log version 1.6
+Python 3.7
+"""
 
 import os
 
