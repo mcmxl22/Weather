@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
-"""index version 10.5
-   Python 3.7.2"""
+"""
+index version 10.5
+Python 3.7
+"""
 
 from beaufort import scale_wind
 from celsius_conversion import to_fahrenheit
