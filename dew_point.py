@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 dew_point version 1.2
 Python 3.7
@@ -23,7 +24,6 @@ def dew_point(temperature):
         result = f"\nThe dew point is {formula}{degree_sign}C."
         print(result)
         logging.debug(result)
-
     except ValueError as error:
         logging.debug(error)
         print("Entry must be a number")
