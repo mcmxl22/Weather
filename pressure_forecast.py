@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
+
 """
 pressure_forecast version 1.4
 Python 3.7
 """
 
-from numli import addnum
+from numli import add_numbers
 
 
 def forecast(pressure_trend):
@@ -22,7 +23,6 @@ def forecast(pressure_trend):
 
     if pressure_trend in forecast_dict:
         print(forecast_dict[pressure_trend])
-
     else:
         print(invalid)
         forecast(trend)
