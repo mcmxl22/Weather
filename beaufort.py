@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 beaufort version 1.1
 Python 3.7
