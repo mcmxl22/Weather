@@ -1,3 +1,11 @@
+#!/usr/bin/env python3
+
+"""
+plot_temp.py version 1
+Python 3.7
+"""
+
+
 from matplotlib import pyplot as plt
 import xlrd
 
