@@ -1,4 +1,4 @@
-#!/bin/python3
+#!/usr/bin/env python3
 
 """
 forecast version 1.4
