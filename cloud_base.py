@@ -1,14 +1,9 @@
 #!/usr/bin/env python3
 
 """
-cloud_base version 1.1
+cloud_base version 1.2
 Python 3.7
 """
-
-import logging
-
-
-logging.basicConfig(filename="cloud_base.log", level=logging.DEBUG)
 
 
 def base(temperature):
@@ -20,8 +15,7 @@ def base(temperature):
         spread = temperature - enter_dew_point
         formula = spread / 2.5 * 1000
         print(f"The cloud ceiling is {formula}' above the ground.")
-    except ValueError as error:
-        logging.debug(error)
+    except ValueError:
         print("Entry must be a number.")
 
 
