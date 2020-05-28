@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-get_temp.py version 1
+get_time.py version 1
 Python 3.7
 """
 
