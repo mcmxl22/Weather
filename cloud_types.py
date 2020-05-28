@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 """
 cloud_types version 1.4
 Python 3.7
@@ -10,7 +11,6 @@ import webbrowser
 
 def clouds(options):
     """View information on cloud types."""
-
     cloud_types = ["Cumulus", "Stratus", "Cumulonimbus", "Cirrus"]
     cloud_options = ["Cloud descriptions", "Cloud images"]
     invalid = "Invalid Answer!"
@@ -30,10 +30,8 @@ def clouds(options):
 
         if description in description_dict:
             webbrowser.open(description_dict[description])
-
         else:
             print(invalid)
-
 
     elif cloud_options in "2":
         numli.addnum(cloud_types)
@@ -48,7 +46,6 @@ def clouds(options):
 
         if img_choice in img_dict:
             webbrowser.open(img_dict[img_choice])
-
         else:
             print(invalid)
 
