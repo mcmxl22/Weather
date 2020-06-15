@@ -1,12 +1,14 @@
 #!/usr/bin/env python3
 
 """
-cloud_types version 1.4
+cloud_types version 1.5
 Python 3.7
 """
 
-import numli
+import sys
 import webbrowser
+from numli import add_numbers
+
 
 
 def clouds(options):
@@ -14,11 +16,11 @@ def clouds(options):
     cloud_types = ["Cumulus", "Stratus", "Cumulonimbus", "Cirrus"]
     cloud_options = ["Cloud descriptions", "Cloud images"]
     invalid = "Invalid Answer!"
-    numli.addnum(cloud_options)
+    add_numbers(cloud_options)
     cloud_options = input("Choose an option. ")
 
     if cloud_options in "1":
-        numli.addnum(cloud_types)
+        add_numbers(cloud_types)
         description = input("Choose an option. ")
 
         description_dict = {
@@ -34,7 +36,7 @@ def clouds(options):
             print(invalid)
 
     elif cloud_options in "2":
-        numli.addnum(cloud_types)
+        add_numbers(cloud_types)
         img_choice = input("Choose an option. ")
 
         img_dict = {
@@ -54,4 +56,4 @@ def clouds(options):
 
 
 if __name__ == "__main__":
-    clouds("options")
+    sys.exit(clouds("options"))
