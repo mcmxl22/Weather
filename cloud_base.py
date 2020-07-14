@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
 """
-cloud_base version 1.2
+cloud_base version 1.3
 Python 3.7
 """
+
+import sys
 
 
 def base(temperature):
@@ -20,4 +22,4 @@ def base(temperature):
 
 
 if __name__ == "__main__":
-    base("temperature")
+    sys.exit(base("temperature"))
