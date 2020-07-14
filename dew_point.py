@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 """
-dew_point version 1.2
+dew_point version 1.3
 Python 3.7
 """
 
 import logging
+import sys
 
 
 logging.basicConfig(filename="dew_point.log", level=logging.DEBUG)
@@ -20,8 +21,8 @@ def dew_point(temperature):
     logging.debug(relative_humidity)
 
     try:
-        formula = int(temperature) - ((100 - relative_humidity) / 5)
-        result = f"\nThe dew point is {formula}{degree_sign}C."
+        formula = temperature - ((100 - relative_humidity) / 5)
+        result = f"The dew point is {formula}{degree_sign}C."
         print(result)
         logging.debug(result)
     except ValueError as error:
@@ -30,4 +31,4 @@ def dew_point(temperature):
 
 
 if __name__ == "__main__":
-    dew_point("temperature")
+    sys.exit(dew_point("temperature"))
