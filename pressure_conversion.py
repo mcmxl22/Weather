@@ -10,7 +10,7 @@ import sys
 def convert_millibars(millibar_convert):
     """Convert millibars to inches of mercury."""
     try:
-        millibar_convert = int(input('Enter pressure in millibars. '))
+        millibar_convert = int(input("Enter pressure in millibars. "))
 
     except ValueError:
         print("Entry must be a number")
@@ -21,4 +21,4 @@ def convert_millibars(millibar_convert):
 
 
 if __name__ == "__main__":
-    sys.exit(convert_millibars('millibar_convert'))
+    sys.exit(convert_millibars("millibar_convert"))
