@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
 """
-pressure_conversion version 1.2
+pressure_conversion version 1.3
 Python 3.7
 """
 
 import sys
 
 
-def convert_millibars(millibar_convert):
+def convert_millibars():
     """Convert millibars to inches of mercury."""
     try:
         millibar_convert = int(input("Enter pressure in millibars. "))
@@ -22,4 +22,4 @@ def convert_millibars(millibar_convert):
 
 
 if __name__ == "__main__":
-    sys.exit(convert_millibars("millibar_convert"))
+    sys.exit(convert_millibars())
