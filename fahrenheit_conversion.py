@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-fahrenheit_conversion version 1.2
+fahrenheit_conversion version 1.3
 Python 3.7
 """
 
@@ -8,10 +8,9 @@ Python 3.7
 import sys
 
 
-def to_celsius(celsius_convert):
+def to_celsius():
     """Convert Fahrenheit to Celsius."""
     degree_sign = "\N{DEGREE SIGN}"
-
     try:
         celsius_convert = int(input("Enter temperature in Celsius. "))
 
@@ -24,4 +23,4 @@ def to_celsius(celsius_convert):
 
 
 if __name__ == "__main__":
-    sys.exit(to_celsius("celsius_convert"))
+    sys.exit(to_celsius())
