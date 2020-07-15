@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-dew_point version 1.3
+dew_point version 1.4
 Python 3.7
 """
 
@@ -12,7 +12,7 @@ import sys
 logging.basicConfig(filename="dew_point.log", level=logging.DEBUG)
 
 
-def dew_point(temperature):
+def find_dew_point():
     """Calculate the dew point."""
     degree_sign = "\N{DEGREE SIGN}"
 
@@ -34,4 +34,4 @@ def dew_point(temperature):
 
 
 if __name__ == "__main__":
-    sys.exit(dew_point("temperature"))
+    sys.exit(find_dew_point())
