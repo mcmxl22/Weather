@@ -41,10 +41,10 @@ def get_cloud_information():
     """Get informayion about cloud tyoes."""
     make_menu()
     cloud_descriptions = {
-    1: "https://en.wikipedia.org/wiki/Cumulus_cloud",
-    2: "https://en.wikipedia.org/wiki/Stratus_cloud",
-    3: "https://en.wikipedia.org/wiki/Cumulonimbus_cloud",
-    4: "https://en.wikipedia.org/wiki/Cirrus_cloud"
+        1: "https://en.wikipedia.org/wiki/Cumulus_cloud",
+        2: "https://en.wikipedia.org/wiki/Stratus_cloud",
+        3: "https://en.wikipedia.org/wiki/Cumulonimbus_cloud",
+        4: "https://en.wikipedia.org/wiki/Cirrus_cloud"
     }
 
     try:
