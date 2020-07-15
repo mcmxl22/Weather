@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-celcius_conversion version 1.1
+celcius_conversion version 1.2
 Python 3.7
 """
 
@@ -15,10 +15,9 @@ def to_fahrenheit():
 
     try:
         fahrenheit_convert = int(input("Enter temperature in Fahrenheit. "))
-
     except ValueError:
-        print("Entry must be a number!")
-
+        print("Please enter a number.")
+        to_fahrenheit()
     else:
         conversion_formula = (fahrenheit_convert - 32) / 1.8
         print(
