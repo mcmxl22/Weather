@@ -8,7 +8,7 @@ Python 3.7
 import sys
 from beaufort import scale_wind
 from celsius_conversion import to_fahrenheit
-from cloud_base import base
+from cloud_base import find_base
 from cloud_types import clouds
 from dew_point import dew_point
 from fahrenheit_conversion import to_celsius
@@ -40,7 +40,7 @@ def main():
             1: to_celsius,
             2: to_fahrenheit,
             3: dew_point,
-            4: base,
+            4: find_base,
             5: wind,
             6: clouds,
             7: scale_wind,
