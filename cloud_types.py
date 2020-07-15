@@ -25,7 +25,7 @@ def view_clouds():
         1: "https://bit.ly/2xH55Er",
         2: "https://bit.ly/2xxD42N",
         3: "https://bit.ly/2Nwns9V",
-        4: "https://bit.ly/2xMDgKG"
+        4: "https://bit.ly/2xMDgKG",
     }
 
     try:
@@ -44,7 +44,7 @@ def get_cloud_information():
         1: "https://en.wikipedia.org/wiki/Cumulus_cloud",
         2: "https://en.wikipedia.org/wiki/Stratus_cloud",
         3: "https://en.wikipedia.org/wiki/Cumulonimbus_cloud",
-        4: "https://en.wikipedia.org/wiki/Cirrus_cloud"
+        4: "https://en.wikipedia.org/wiki/Cirrus_cloud",
     }
 
     try:
