@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 
 """
-cloud_base version 1.3
+cloud_base version 1.4
 Python 3.7
 """
 
 import sys
 
 
-def base(temperature):
+def find_base():
     """Calculate the altittude of the clouds."""
     try:
         temperature = int(input("Enter temperature in Celsius. "))
@@ -23,6 +23,5 @@ def base(temperature):
         print(f"The cloud ceiling is {formula}' above the ground.")
 
 
-
 if __name__ == "__main__":
-    sys.exit(base("temperature"))
+    sys.exit(find_base())
