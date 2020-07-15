@@ -9,7 +9,7 @@ Python 3.7
 import sys
 
 
-def to_fahrenheit(fahrenheit_convert):
+def to_fahrenheit():
     """Convert Celsius to Fahrenheit."""
     degree_sign = "\N{DEGREE SIGN}"
 
@@ -27,4 +27,4 @@ def to_fahrenheit(fahrenheit_convert):
 
 
 if __name__ == "__main__":
-    sys.exit(to_fahrenheit("fahrenheit_convert"))
+    sys.exit(to_fahrenheit())
