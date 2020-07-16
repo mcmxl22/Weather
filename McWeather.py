@@ -50,13 +50,16 @@ def main():
 
         try:
             weather_choice = int(input("\nChoose an option. "))
-        except ValueError:
-            print("Please enter a number.")
+            if weather_choice == 10:
+                sys.exit(0)
+            elif weather_choice > 10:
+                print("Please enter correct number.")
+            else:
+                choice_dic[weather_choice]()
 
-        if weather_choice == 10:
-            sys.exit(0)
-        else:
-            choice_dic[weather_choice]()
+        except(ValueError, KeyError):
+            print("Please enter a number.")
+            main()
 
 
 if __name__ == "__main__":
