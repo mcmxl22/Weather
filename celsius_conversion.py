@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-celcius_conversion version 1.2
+celcius_conversion version 1.3
 Python 3.7
 """
 
@@ -21,7 +21,7 @@ def to_fahrenheit():
     else:
         conversion_formula = (fahrenheit_convert - 32) / 1.8
         print(
-            f"{fahrenheit_convert}{degree_sign}F is {conversion_formula}{degree_sign}C."
+            f"{fahrenheit_convert}{degree_sign}F is {round(conversion_formula, 2)}{degree_sign}C."
         )
 
 
