@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
 
 """
-get_time.py version 1
+get_time.py version 1.1
 Python 3.7
 """
 
+import sys
 from datetime import datetime
 
 
@@ -16,4 +17,4 @@ def get_time():
 
 
 if __name__ == "__main__":
-    get_time()
+    sys.exit(get_time())
