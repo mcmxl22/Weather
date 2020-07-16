@@ -13,10 +13,8 @@ def find_base():
     try:
         temperature = int(input("Enter temperature in Celsius. "))
         enter_dew_point = int(input("Enter dew point in Celsius. "))
-
     except ValueError:
         print("Entry must be a number.")
-
     else:
         spread = temperature - enter_dew_point
         formula = spread / 2.5 * 1000
