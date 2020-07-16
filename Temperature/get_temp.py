@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-get_temp.py version 2.3
+get_temp.py version 2.4
 requires get_time.py
 Python 3.7
 """
@@ -19,9 +19,12 @@ def get_temperature():
     get_page = requests.get("http://bit.ly/3bqVxjP")
     soup = BeautifulSoup(get_page.content, "html.parser")
     get_temp = soup.find("p", {"class": "myforecast-current-lrg"})
+    return get_temp
 
-    # Formats temperature.
-    current_temp = "".join(get_temp)
+
+def format_temperature():
+    """Formats temperature."""
+    current_temp = "".join(get_temperature())
     temp_list = list(current_temp)
     trim_characters = [s for s in temp_list if s not in ["°", "F"]]
     temp = int("".join(trim_characters))
@@ -37,8 +40,9 @@ def main():
     while True:
         this_time = get_time()
         print(f"Temperature recorded at: {this_time}", end="\r")
+
         try:
-            sheet1.write(row, col, get_temperature())
+            sheet1.write(row, col, format_temperature())
             sheet1.write(row, col + 1, this_time)
             book.save("Temp.xls")
             row += 1
