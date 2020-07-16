@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-wind_speed version 1.4
+wind_speed version 1.5
 Python 3.7
 """
 
@@ -13,10 +13,9 @@ logging.basicConfig(filename="wind_speed.log", level=logging.DEBUG)
 
 def wind():
     """Convert knots to MPH"""
-    convert_wind = input("Enter wind speed as knots. ")
-    logging.debug(convert_wind)
-
     try:
+        convert_wind = int(input("Enter wind speed as knots. "))
+        logging.debug(convert_wind)
         conversion_formula = ((float(convert_wind)) * 6067) / 5280
         result = f"{convert_wind} knots is {round(conversion_formula, 2)} MPH."
         logging.debug(result)
