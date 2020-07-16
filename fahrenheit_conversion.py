@@ -18,7 +18,7 @@ def to_celsius():
         print("Entry must be a number!")
     else:
         conversion_formula = celsius_convert * 1.8 + 32
-        print(f"{celsius_convert}{degree_sign}C is {round(conversion_formula), 2}{degree_sign}F.")
+        print(f"{celsius_convert}{degree_sign}C is {round(conversion_formula, 2)}{degree_sign}F.")
 
 
 if __name__ == "__main__":
