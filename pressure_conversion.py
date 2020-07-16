@@ -12,13 +12,11 @@ def convert_millibars():
     """Convert millibars to inches of mercury."""
     try:
         millibar_convert = int(input("Enter pressure in millibars. "))
-
     except ValueError:
         print("Entry must be a number")
-
     else:
         conversion_formula = int(millibar_convert) / 33.864
-        return f"{millibar_convert} millibars is {round(conversion_formula, 2)} inches of mercury."
+        print(f"{millibar_convert} millibars is {round(conversion_formula, 2)} inches of mercury.")
 
 
 if __name__ == "__main__":
