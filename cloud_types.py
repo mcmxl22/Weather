@@ -56,7 +56,7 @@ def get_cloud_information():
         webbrowser.open(cloud_descriptions[description])
 
 
-def main():
+def cloud_main():
     """Explore the clouds."""
     cloud_choices = ["View clouds", "Cloud information"]
     add_numbers(cloud_choices)
@@ -67,9 +67,9 @@ def main():
     elif choice == 2:
         get_cloud_information()
     else:
-        print("invalid entry!")
+        print("Please enter a number.")
         main()
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(cloud_main())
