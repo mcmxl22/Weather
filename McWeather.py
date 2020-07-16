@@ -9,7 +9,7 @@ import sys
 from beaufort import scale_wind
 from celsius_conversion import to_fahrenheit
 from cloud_base import find_base
-from cloud_types import main
+from cloud_types import cloud_main
 from dew_point import find_dew_point
 from fahrenheit_conversion import to_celsius
 from pressure_conversion import convert_millibars
@@ -42,7 +42,7 @@ def main():
             3: find_dew_point,
             4: find_base,
             5: wind,
-            6: main,
+            6: cloud_main,
             7: scale_wind,
             8: get_forecast,
             9: convert_millibars,
@@ -56,7 +56,7 @@ def main():
         if weather_choice == 10:
             sys.exit(0)
         else:
-            print(f"\n{choice_dic[weather_choice]()}\n")
+            choice_dic[weather_choice]()
 
 
 if __name__ == "__main__":
