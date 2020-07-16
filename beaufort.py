@@ -6,10 +6,6 @@ Python 3.7
 """
 
 import sys
-import logging
-
-
-logging.basicConfig(filename="beaufort.log", level=logging.DEBUG)
 
 
 SCALE = {
@@ -33,7 +29,6 @@ def scale_wind():
     """Print Beaufort scale description of wind speeds."""
     try:
         wind_speed = int(input("Enter wind speed. "))
-        logging.debug(wind_speed)
 
         if wind_speed == 0:
             print(SCALE["0"])
@@ -63,7 +58,6 @@ def scale_wind():
             print(SCALE["12"])
 
     except ValueError as error:
-        logging.debug(error)
         print("Please enter a number.")
         scale_wind()
 
