@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-pressure_forecast version 1.5
+pressure_forecast version 1.6
 Python 3.7
 """
 
