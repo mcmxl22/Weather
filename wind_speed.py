@@ -21,7 +21,6 @@ def wind():
         result = f"{convert_wind} knots is {round(conversion_formula, 2)} MPH."
         logging.debug(result)
         print(result)
-
     except ValueError as error:
         logging.debug(error)
         print("Entry must be a number")
