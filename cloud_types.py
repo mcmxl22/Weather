@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-cloud_types version 1.6
+cloud_types version 1.7
 Requires numli.py
 Python 3.7
 """
@@ -34,7 +34,7 @@ def view_clouds():
         print("Please enter a number.")
         view_clouds()
     else:
-        webbrowser.open(img_dict[view])
+        webbrowser.open(img_dict.get(view))
 
 
 def get_cloud_information():
@@ -53,7 +53,7 @@ def get_cloud_information():
         print("Please enter a number.")
         get_cloud_information()
     else:
-        webbrowser.open(cloud_descriptions[description])
+        webbrowser.open(cloud_descriptions.get(description))
 
 
 def cloud_main():
