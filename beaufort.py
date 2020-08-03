@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-beaufort version 1.2
+beaufort version 1.3
 Python 3.7
 """
 
@@ -31,31 +31,31 @@ def scale_wind():
         wind_speed = int(input("Enter wind speed. "))
 
         if wind_speed == 0:
-            print(SCALE["0"])
+            print(SCALE.get("0"))
         elif wind_speed in range(1, 4):
-            print(SCALE["1"])
+            print(SCALE.get("1"))
         elif wind_speed in range(4, 8):
-            print(SCALE["2"])
+            print(SCALE.get("2"))
         elif wind_speed in range(8, 13):
-            print(SCALE["3"])
+            print(SCALE.get("3"))
         elif wind_speed in range(13, 19):
-            print(SCALE["4"])
+            print(SCALE.get("4"))
         elif wind_speed in range(19, 25):
-            print(SCALE["5"])
+            print(SCALE.get("5"))
         elif wind_speed in range(25, 32):
-            print(SCALE["6"])
+            print(SCALE.get("6"))
         elif wind_speed in range(32, 39):
-            print(SCALE["7"])
+            print(SCALE.get("7"))
         elif wind_speed in range(39, 47):
-            print(SCALE["8"])
+            print(SCALE.get("8"))
         elif wind_speed in range(47, 55):
-            print(SCALE["9"])
+            print(SCALE.get("9"))
         elif wind_speed in range(55, 64):
-            print(SCALE["10"])
+            print(SCALE.get("10"))
         elif wind_speed in range(64, 73):
-            print(SCALE["11"])
+            print(SCALE.get("11"))
         elif wind_speed > 72:
-            print(SCALE["12"])
+            print(SCALE.get("12"))
 
     except ValueError as error:
         print("Please enter a number.")
