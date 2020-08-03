@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-pressure_forecast version 1.6
+pressure_forecast version 1.7
 Python 3.7
 """
 
@@ -26,7 +26,7 @@ def get_forecast():
         print("Please enter a number.")
         get_forecast()
     else:
-        print(forecast_dict[pressure_trend])
+        print(forecast_dict.get(pressure_trend))
 
 
 if __name__ == "__main__":
