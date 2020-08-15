@@ -15,7 +15,7 @@ import sys
 
 
 def get_temperature():
-    """Gets temperature from the interwebs and formats it."""
+    """Gets temperature from the interwebs."""
     get_page = requests.get("http://bit.ly/3bqVxjP")
     soup = BeautifulSoup(get_page.content, "html.parser")
     get_temp = soup.find("p", {"class": "myforecast-current-lrg"})
