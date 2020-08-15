@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-get_temp.py version 2.4
+get_temp.py version 2.5
 requires get_time.py
 Python 3.7
 """
@@ -25,9 +25,7 @@ def get_temperature():
 def format_temperature():
     """Formats temperature."""
     current_temp = "".join(get_temperature())
-    temp_list = list(current_temp)
-    trim_characters = [s for s in temp_list if s not in ["°", "F"]]
-    temp = int("".join(trim_characters))
+    temp = int(current_temp.strip("°F"))
     return temp
 
 
