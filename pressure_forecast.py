@@ -1,19 +1,28 @@
 #!/usr/bin/env python3
 
 """
-pressure_forecast version 1.7
+Author: M. McConnaughey
+pressure_forecast version 1.8
 Python 3.7
+Date: 07/09/2021
 """
 
-import sys
 from numli import add_numbers
 
 
-def get_forecast():
-    """Get forecasts based on barometric pressure trends."""
+def make_menu():
+    """
+    Make a list of menu items.
+    """
     trend_options = ["Rising", "Falling", "Steady"]
-    add_numbers(trend_options)
-
+    menu = add_numbers(trend_options)
+    return menu
+    
+    
+def get_forecast():
+    """
+    Get forecasts based on barometric pressure trends.
+    """
     forecast_dict = {
         1: "Fairer weather on the way.",
         2: "Poorer weather on the way.",
@@ -29,5 +38,10 @@ def get_forecast():
         print(forecast_dict.get(pressure_trend))
 
 
+def main():
+    make_menu()
+    get_forecast()
+
+
 if __name__ == "__main__":
-    sys.exit(get_forecast())
+    main()
