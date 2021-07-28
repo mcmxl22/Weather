@@ -1,27 +1,30 @@
 #!/usr/bin/env python3
 
 """
-dew_point version 1.4
+dew_point version 1.5
 Python 3.7
 """
 
-import sys
+class Air:
+    
+    def compute_dew_point(self, temperature, humidity):
+        dew_point = int(temperature) - ((100 - int(humidity)) / 5)
+        return dew_point
 
 
-def find_dew_point():
-    """Calculate the dew point."""
+def main():
+    """
+    Calculate the dew point.
+    """
     degree_sign = "\N{DEGREE SIGN}"
+    temperature = input("Enter temperature: ")
+    humidity = input("Enter humidity: ")
 
-    try:
-        temperature = int(input("Enter the temperature in Celsius. "))
-        relative_humidity = int(input("Enter the relative humidity. "))
-    except ValueError as error:
-        print("Entry must be a number")
-    else:
-        formula = temperature - ((100 - relative_humidity) / 5)
-        result = f"The dew point is {formula}{degree_sign}C."
-        print(result)
+    x = Air()
+
+    result = x.compute_dew_point(temperature, humidity)
+    print(f"The dew point in {result}{degree_sign}F")
 
 
 if __name__ == "__main__":
-    sys.exit(find_dew_point())
+    main()
