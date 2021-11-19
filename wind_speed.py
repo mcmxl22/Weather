@@ -13,7 +13,7 @@ def wind():
         conversion_formula = ((float(convert_wind)) * 6067) / 5280
         result = f"{convert_wind} knots is {round(conversion_formula, 2)} MPH."
         print(result)
-    except ValueError as error:
+    except ValueError:
         print("Entry must be a number")
         wind()
 
