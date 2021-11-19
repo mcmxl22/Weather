@@ -5,8 +5,6 @@ beaufort version 1.3
 Python 3.7
 """
 
-import sys
-
 
 SCALE = {
     "0": "Calm",
@@ -63,4 +61,4 @@ def scale_wind():
 
 
 if __name__ == "__main__":
-    sys.exit(scale_wind())
+    exit(scale_wind())
