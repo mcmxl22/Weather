@@ -5,8 +5,6 @@ wind_speed version 1.5
 Python 3.7
 """
 
-import sys
-
 
 def wind():
     """Convert knots to MPH"""
@@ -21,4 +19,4 @@ def wind():
 
 
 if __name__ == "__main__":
-    sys.exit(wind())
+    exit(wind())
