@@ -6,7 +6,6 @@ Requires numli.py
 Python 3.7
 """
 
-import sys
 import webbrowser
 from numli import add_numbers
 
@@ -72,4 +71,4 @@ def cloud_main():
 
 
 if __name__ == "__main__":
-    sys.exit(cloud_main())
+    exit(cloud_main())
