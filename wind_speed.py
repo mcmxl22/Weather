@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 """
-wind_speed version 1.6
+Author: M. McConnaughey
+wind_speed version 1.7
+Date: 07/13/2022
 Python 3.7
 """
 
@@ -39,6 +41,7 @@ class Menu:
 
 
 def main():
+    """main function"""
     list_choices = Menu.list_choices()
     error = "Please enter a valid speed."
 
