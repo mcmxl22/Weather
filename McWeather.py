@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 """
-index version 10.8
+Author: M. McConnaughey
+McWeather version 10.9
+Date: 07/13.2022
 Python 3.7
 """
 
