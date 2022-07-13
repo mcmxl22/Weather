@@ -13,8 +13,8 @@ import xlrd
 
 def plot_temp():
     """Plot the temperature from the .xls file."""
-    wb = xlrd.open_workbook("Temp.xls")
-    sheet1 = wb.sheet_by_name("Temperature")
+    work_book = xlrd.open_workbook("Temp.xls")
+    sheet1 = work_book.sheet_by_name("Temperature")
     time_x = sheet1.col_values(1)
     temp_y = sheet1.col_values(0)
     plt.title("Time")
