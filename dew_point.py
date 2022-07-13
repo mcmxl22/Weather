@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 
 """
+Author: M McConnaughey
 dew_point version 1.5
 Python 3.7
+Date: 07/13/2022
 """
 
 class Air:
@@ -27,4 +29,4 @@ def main():
 
 
 if __name__ == "__main__":
-    exit(main())
+    main()
