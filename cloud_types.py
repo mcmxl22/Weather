@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
 """
+Author: M McConnaughey
 cloud_types version 1.7
 Requires numli.py
 Python 3.7
+Date: 07/12/2022
 """
 
 import webbrowser
@@ -71,4 +73,4 @@ def cloud_main():
 
 
 if __name__ == "__main__":
-    exit(cloud_main())
+    cloud_main()
