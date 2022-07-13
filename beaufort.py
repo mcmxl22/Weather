@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-beaufort version 1.3
+beaufort version 1.4
 Python 3.7
 """
 
@@ -61,4 +61,4 @@ def scale_wind():
 
 
 if __name__ == "__main__":
-    exit(scale_wind())
+    scale_wind()
