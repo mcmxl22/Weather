@@ -3,26 +3,23 @@
 """
 Author: M. McConnaughey
 pressure_forecast version 1.8
+Ruquires numli.py
+Date: 07/13/2022
 Python 3.7
-Date: 07/09/2021
 """
 
 from numli import add_numbers
 
 
 def make_menu():
-    """
-    Make a list of menu items.
-    """
+    """Make a list of menu items."""
     trend_options = ["Rising", "Falling", "Steady"]
     menu = add_numbers(trend_options)
     return menu
     
     
 def get_forecast():
-    """
-    Get forecasts based on barometric pressure trends.
-    """
+    """Get forecasts based on barometric pressure trends."""
     forecast_dict = {
         1: "Fairer weather on the way.",
         2: "Poorer weather on the way.",
@@ -39,6 +36,7 @@ def get_forecast():
 
 
 def main():
+    """main function"""
     make_menu()
     get_forecast()
 
