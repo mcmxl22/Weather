@@ -1,11 +1,10 @@
 #!/usr/bin/env python3
 
 """
-index version 10.7
+index version 10.8
 Python 3.7
 """
 
-import sys
 from beaufort import scale_wind
 from celsius_conversion import to_fahrenheit
 from cloud_base import find_base
@@ -51,7 +50,7 @@ def main():
         try:
             weather_choice = int(input("\nChoose an option. "))
             if weather_choice == 10:
-                sys.exit(0)
+                exit()
             elif weather_choice > 10:
                 print("Please enter correct number.")
             else:
@@ -63,4 +62,4 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
