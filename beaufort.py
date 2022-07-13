@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 """
-beaufort version 1.4
+Author: M. McConnaughey
+beaufort version 1.5
+Date: 07/13/2022
 Python 3.7
 """
 
