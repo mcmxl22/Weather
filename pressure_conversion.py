@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 
 """
+Author: M McConnaughey
 pressure_conversion version 1.3
+Date: 07/13/2022
 Python 3.7
 """
-
-import sys
 
 
 def convert_millibars():
@@ -20,4 +20,4 @@ def convert_millibars():
 
 
 if __name__ == "__main__":
-    sys.exit(convert_millibars())
+    convert_millibars()
