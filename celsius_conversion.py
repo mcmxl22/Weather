@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
 
 """
-celcius_conversion version 1.3
+celcius_conversion version 1.4
 Python 3.7
 """
-
-
-import sys
 
 
 def to_fahrenheit():
@@ -26,4 +23,4 @@ def to_fahrenheit():
 
 
 if __name__ == "__main__":
-    sys.exit(to_fahrenheit())
+    to_fahrenheit()
