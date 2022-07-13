@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 
 """
-get_temp.py version 2.5
+Author: M. McConnaughey
+get_temp version 2.6
 requires get_time.py
-Python 3.7
+Date: 07/13/2022
+Python 3.7+
 """
 
 from bs4 import BeautifulSoup
@@ -11,7 +13,6 @@ from get_time import get_time
 import requests
 import time
 from xlwt import Workbook
-import sys
 
 
 def get_temperature():
@@ -31,10 +32,11 @@ def format_temperature():
 
 def main():
     """Writes temperature and time to .xls file at set interval."""
-    seconds = 60
+    seconds = 90
     col, row = 0, 0
     book = Workbook()
     sheet1 = book.add_sheet("Temperature")
+
     while True:
         this_time = get_time()
         print(f"Temperature recorded at: {this_time}", end="\r")
@@ -46,8 +48,8 @@ def main():
             row += 1
             time.sleep(seconds)
         except PermissionError:
-            sys.exit("Please close the file.")
+            exit("Please close the file.")
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    main()
