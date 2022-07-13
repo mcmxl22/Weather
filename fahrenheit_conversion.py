@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 
 """
-fahrenheit_conversion version 1.4
+Author: M McConnaughey
+fahrenheit_conversion version 1.5
+Date: 07/13/2022
 Python 3.7
 """
-
-
-import sys
 
 
 def to_celsius():
@@ -23,4 +22,4 @@ def to_celsius():
 
 
 if __name__ == "__main__":
-    sys.exit(to_celsius())
+    to_celsius()
