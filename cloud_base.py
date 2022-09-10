@@ -8,7 +8,7 @@ Date: 08/09/2022
 """
 
 
-def find_base():
+def find_base() -> float:
     """
     Calculate the altittude of the clouds.
     """
@@ -17,12 +17,12 @@ def find_base():
     return formula
 
 
-def get_dewpoint():
+def get_dewpoint() -> int:
     enter_dew_point = int(input("Enter dew point in Celsius. "))
     return enter_dew_point
 
 
-def get_temperature():
+def get_temperature() -> int:
     temperature = int(input("Enter temperature in Celsius. "))
     return temperature
 
