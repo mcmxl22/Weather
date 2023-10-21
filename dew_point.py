@@ -2,16 +2,19 @@
 
 """
 Author: M McConnaughey
-dew_point version 1.5
+dew_point version 1.6
 Python 3.7
-Date: 07/13/2022
+Date: 10/21/2023
 """
 
-class Air:
-    
-    def compute_dew_point(self, temperature, humidity):
-        dew_point = int(temperature) - ((100 - int(humidity)) / 5)
-        return dew_point
+
+def calculate_dew_point(temperature, humidity) -> float:
+    """
+    define the dew point formula.
+    """
+    dew_point = temperature - ((100 - humidity) / 5)
+
+    return dew_point
 
 
 def main():
@@ -19,12 +22,14 @@ def main():
     Calculate the dew point.
     """
     degree_sign = "\N{DEGREE SIGN}"
-    temperature = input("Enter temperature: ")
-    humidity = input("Enter humidity: ")
 
-    x = Air()
+    try:
+        temperature = int(input("Enter temperature: "))
+        humidity = int(input("Enter humidity: "))
+    except ValueError:
+        print("Please enter a number.")
 
-    result = x.compute_dew_point(temperature, humidity)
+    result = calculate_dew_point(temperature, humidity)
     print(f"The dew point in {result}{degree_sign}F")
 
 
