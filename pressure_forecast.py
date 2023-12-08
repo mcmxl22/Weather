@@ -1,23 +1,17 @@
-#!/usr/bin/env python3
-
 """
 Author: M. McConnaughey
-pressure_forecast version 1.8
-Ruquires numli.py
-Date: 07/13/2022
+pressure_forecast version 1.9
+Date: 12/07/2023
 Python 3.7
 """
-
-from numli import add_numbers
 
 
 def make_menu():
     """Make a list of menu items."""
-    trend_options = ["Rising", "Falling", "Steady"]
-    menu = add_numbers(trend_options)
-    return menu
-    
-    
+    trend_options = ["1 Rising", "2 Falling", "3 Steady"]
+    for i in trend_options:
+        print(i)
+
 def get_forecast():
     """Get forecasts based on barometric pressure trends."""
     forecast_dict = {
@@ -35,11 +29,6 @@ def get_forecast():
         print(forecast_dict.get(pressure_trend))
 
 
-def main():
-    """main function"""
+if __name__ == "__main__":
     make_menu()
     get_forecast()
-
-
-if __name__ == "__main__":
-    main()
