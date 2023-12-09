@@ -1,7 +1,7 @@
 """
 Author: M. McConnaughey
-pressure_forecast version 1.9
-Date: 12/07/2023
+pressure_forecast version 2.0
+Date: 12/08/2023
 Python 3.7
 """
 
@@ -19,16 +19,23 @@ def get_forecast():
         2: "Poorer weather on the way.",
         3: "No significant change.",
     }
+    return forecast_dict
 
-    try:
-        pressure_trend = int(input("\nChoose a trend. "))
-    except ValueError:
-        print("Please enter a number.")
-        get_forecast()
-    else:
-        print(forecast_dict.get(pressure_trend))
-
+def get_input():
+    forecast = get_forecast()
+    while True:
+        try:
+            pressure_trend = int(input("\nChoose a trend (or enter 4 to exit): "))
+            if pressure_trend not in forecast:
+                if pressure_trend == 4:
+                    break
+                print(f"Option {pressure_trend} is not valid.")
+                continue
+            print(forecast[pressure_trend])
+            break
+        except ValueError:
+            print("Please enter a number.")
 
 if __name__ == "__main__":
     make_menu()
-    get_forecast()
+    get_input()
