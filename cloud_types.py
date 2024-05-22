@@ -68,7 +68,7 @@ def cloud_main():
         get_cloud_information()
     else:
         print("Please enter a number.")
-        main()
+        cloud_main()
 
 
 if __name__ == "__main__":
