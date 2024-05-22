@@ -9,14 +9,12 @@ Date: 07/12/2022
 """
 
 import webbrowser
-from numli import add_numbers
-
 
 def make_menu():
     """Make a menu of cloud types."""
     cloud_types = ["Cumulus", "Stratus", "Cumulonimbus", "Cirrus"]
-    menu = add_numbers(cloud_types)
-    return menu
+    for c, value in enumerate(cloud_types, 1):
+            print(c, value)
 
 
 def view_clouds():
@@ -60,7 +58,8 @@ def get_cloud_information():
 def cloud_main():
     """Explore the clouds."""
     cloud_choices = ["View clouds", "Cloud information"]
-    add_numbers(cloud_choices)
+    for c, value in enumerate(cloud_choices, 1):
+        print(c, value)
     choice = int(input("Choose an option. "))
 
     if choice == 1:
