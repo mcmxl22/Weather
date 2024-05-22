@@ -2,10 +2,9 @@
 
 """
 Author: M McConnaughey
-cloud_types version 1.7
-Requires numli.py
+cloud_types version 1.8
 Python 3.7
-Date: 07/12/2022
+Date: 5/21/2024
 """
 
 import webbrowser
