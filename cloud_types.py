@@ -9,16 +9,15 @@ Date: 5/21/2024
 
 import webbrowser
 
-def make_menu():
-    """Make a menu of cloud types."""
-    cloud_types = ["Cumulus", "Stratus", "Cumulonimbus", "Cirrus"]
+def make_menu(cloud_types):
+    """Display a menu of cloud types."""
     for c, value in enumerate(cloud_types, 1):
-            print(c, value)
-
+        print(f"{c}. {value}")
 
 def view_clouds():
-    """view images of cloud types"""
-    make_menu()
+    """View images of cloud types."""
+    cloud_types = ["Cumulus", "Stratus", "Cumulonimbus", "Cirrus"]
+    make_menu(cloud_types)
     img_dict = {
         1: "https://bit.ly/2xH55Er",
         2: "https://bit.ly/2xxD42N",
@@ -27,17 +26,20 @@ def view_clouds():
     }
 
     try:
-        view = int(input("Choose an option. "))
+        view = int(input("Choose an option (1-4): "))
+        if view in img_dict:
+            webbrowser.open(img_dict[view])
+        else:
+            print("Invalid option. Please choose a number between 1 and 4.")
+            view_clouds()
     except ValueError:
-        print("Please enter a number.")
+        print("Invalid input. Please enter a number.")
         view_clouds()
-    else:
-        webbrowser.open(img_dict.get(view))
-
 
 def get_cloud_information():
-    """Get informayion about cloud tyoes."""
-    make_menu()
+    """Get information about cloud types."""
+    cloud_types = ["Cumulus", "Stratus", "Cumulonimbus", "Cirrus"]
+    make_menu(cloud_types)
     cloud_descriptions = {
         1: "https://en.wikipedia.org/wiki/Cumulus_cloud",
         2: "https://en.wikipedia.org/wiki/Stratus_cloud",
@@ -46,29 +48,34 @@ def get_cloud_information():
     }
 
     try:
-        description = int(input("Choose an option. "))
+        description = int(input("Choose an option (1-4): "))
+        if description in cloud_descriptions:
+            webbrowser.open(cloud_descriptions[description])
+        else:
+            print("Invalid option. Please choose a number between 1 and 4.")
+            get_cloud_information()
     except ValueError:
-        print("Please enter a number.")
+        print("Invalid input. Please enter a number.")
         get_cloud_information()
-    else:
-        webbrowser.open(cloud_descriptions.get(description))
-
 
 def cloud_main():
     """Explore the clouds."""
     cloud_choices = ["View clouds", "Cloud information"]
     for c, value in enumerate(cloud_choices, 1):
-        print(c, value)
-    choice = int(input("Choose an option. "))
-
-    if choice == 1:
-        view_clouds()
-    elif choice == 2:
-        get_cloud_information()
-    else:
-        print("Please enter a number.")
+        print(f"{c}. {value}")
+    
+    try:
+        choice = int(input("Choose an option (1-2): "))
+        if choice == 1:
+            view_clouds()
+        elif choice == 2:
+            get_cloud_information()
+        else:
+            print("Invalid option. Please choose 1 or 2.")
+            cloud_main()
+    except ValueError:
+        print("Invalid input. Please enter a number.")
         cloud_main()
-
 
 if __name__ == "__main__":
     cloud_main()
