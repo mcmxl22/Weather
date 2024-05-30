@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 """
-Author: M McConnaughey
-cloud_types version 1.8
+Author: McConnaughey
+cloud_types version 1.9
 Python 3.7
-Date: 5/21/2024
+Date: 5/30/2024
 """
 
 import webbrowser
